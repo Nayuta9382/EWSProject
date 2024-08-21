@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+
+    <!--カーセル -->
+    <div class="carousel">
+        <div class="slide">
+            <a class="slide_link" href="#">
+                <p>sample1</p>
+            </a>
+            <a class="slide_link" href="#">
+                <p>sample2</p>
+            </a>
+            <a class="slide_link" href="#">
+                <p>sample3</p>
+            </a>
+        </div>
+        <div class="slide_button">
+            <button id="left_button" type="button" class="left_button"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+            <button id="right_button" type="button" class="right_button"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+        </div>
+    </div>
+
+    <script>
+        const left_button = document.getElementById("left_button");
+        const right_button = document.getElementById("right_button");
+
+        left_button.addEventListener("click",()=>{
+            slide_left();
+        });
+        right_button.addEventListener("click",()=>{
+            slide_right();
+        });
+
+        const carousel = document.getElementsByClassName("slide");
+        const slide_element = document.getElementsByClassName("slide_link");
+        const new_frist_element = slide_element[0].cloneNode(true);
+        const new_last_element = slide_element[2].cloneNode(true);
+        carousel[0].appendChild(new_frist_element);
+        carousel[0].prepend(new_last_element);
+        // スライドを常時動かす
+        let slide_interval =  setInterval(slide_left,4000);
+        function slide_left(){
+            // ボタンのクリックを無効化する
+            left_button.classList.add("pointer_off");
+            // 常時実行しているスライドを一時停止
+            clearInterval(slide_interval);
+            for(let i = 0; i < slide_element.length; i++){
+                slide_element[i].classList.add("slide_left");
+            }
+            setTimeout(()=>{
+                const new_element = slide_element[2].cloneNode(true);
+                carousel[0].appendChild(new_element);
+                slide_element[0].remove();
+                for(let i = 0; i < slide_element.length; i++){
+                    slide_element[i].classList.remove("slide_left");
+                }
+                // ボタンを有効化する
+                left_button.classList.remove("pointer_off");
+                // スライドを再開する
+                slide_interval =  setInterval(slide_left,4000);
+            },1000);
+        }
+        function slide_right(){
+           // ボタンのクリックを無効化する
+            right_button.classList.add("pointer_off");
+            // 常時実行しているスライドを一時停止
+            clearInterval(slide_interval);
+            for(let i = 0; i < slide_element.length; i++){
+                slide_element[i].classList.add("slide_right");
+            }
+            setTimeout(()=>{
+                const new_element = slide_element[2].cloneNode(true);
+                carousel[0].prepend(new_element);
+                slide_element[slide_element.length-1].remove();
+                for(let i = 0; i < slide_element.length; i++){
+                    slide_element[i].classList.remove("slide_right");
+                }
+                  // ボタンのクリックを有効化する
+            right_button.classList.remove("pointer_off");
+             // スライドを再開する
+             slide_interval =  setInterval(slide_left,4000);
+            },1000);
+        }
+       
+    </script>
+
+    <!-- 画面トップ -->
+    <div class="top_heading">
+        <img src="./sampleImg2.jpg" alt="">
+        <h1>会社概要・アクセス</h1>
+        <p>Recommended Package</p>
+    </div>
+
+    <h1 class="heading">ここに文字が入ります</h1>
+
+    <!-- バー状のボタン -->
+    <div class="var_button_sm">
+        <a href="#">
+            <button type="button">文字</button>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </a>
+    </div>
+
+    
+
+
+    <div id="tag_list">
+        <button id="tag_button1" type="button" class="narrow_down">子供会・学校行事</button>
+        <button id="tag_button2" type="button" class="narrow_down">その他団体</button>
+        <button id="tag_button3" type="button" class="narrow_down">家族で</button>
+        <button id="tag_button4" type="button" class="narrow_down">カップル・友達と</button>
+        <button id="tag_button5" type="button" class="narrow_down">記念日に</button>
+        <button id="tag_button6" type="button" class="narrow_down">日帰り</button>
+        <button id="tag_button7" type="button" class="narrow_down">小旅行</button>
+    </div>
+
+    <div class="plan_info">
+        <div class="tag">
+            <button class="tag_button1" type="button">子供会・学校行事</button>
+            <button class="tag_button2" type="button">その他団体</button>
+            <button class="tag_button3" type="button">家族で</button>
+            <button class="tag_button4" type="button">カップル・友達と</button>
+            <button class="tag_button5" type="button">記念日に</button>
+            <button class="tag_button6" type="button">日帰り</button>
+            <button class="tag_button7" type="button">小旅行</button>
+        </div>
+    </div>
+
+    <div class="plan_info">
+        <div class="tag">
+            <button class="tag_button2" type="button">その他団体</button>
+        </div>
+    </div>
+    
+    <div class="plan_info">
+        <div class="tag">
+            <button class="tag_button3" type="button">家族で</button>
+        </div>
+    </div>
+    
+    <div class="plan_info">
+        <div class="tag">
+            <button class="tag_button4" type="button">カップル・友達と</button>
+        </div>
+    </div>
+    
+    <div class="plan_info">
+        <div class="tag">
+            <button class="tag_button5" type="button">記念日に</button>
+        </div>
+    </div>
+    
+    <div class="plan_info">
+        <div class="tag">
+            <button class="tag_button6" type="button">日帰り</button>
+        </div>
+    </div>
+    
+    <div class="plan_info">
+        <div class="tag">         
+            <button class="tag_button7" type="button">小旅行</button>
+        </div>
+    </div>
+    
+
+    <!-- カード上ボタン -->
+    
+    <div class="card_button">
+        <a href="#">
+            <p>ガラス製作物の<br>通販もやっています</p>
+            <img src="./sample.jpg" alt="">
+        </a>
+    </div>
+   
+<script>
+    const tag = document.getElementById("tag_list");
+    const tag_button = tag.querySelectorAll("button");
+    const plan_info = document.getElementsByClassName("plan_info");
+    tag_button.forEach((button) => {
+        button.addEventListener("click",tag_filter);
+    });
+    function tag_filter(event){ 
+        if(event.target.classList.contains('narrow_down') == true){
+                // 消す処理
+                event.target.classList.remove("narrow_down");
+                const on_plan = tag.querySelectorAll(".narrow_down");
+                let on_plan_id = [];
+                for(let i = 0; i < on_plan.length; i++){
+                    on_plan_id.push(on_plan[i].id);
+                }
+                for(let i = 0; i < plan_info.length; i++){
+                    let hidden_flg = false; 
+                    const plan_tags = plan_info[i].querySelector(".tag").querySelectorAll("button");
+                    for(let j = 0; j < plan_tags.length; j++){
+                        if(on_plan_id.includes(plan_tags[j].className)){
+                            hidden_flg = true;
+                            break;
+                        }
+                    }
+                    if(!hidden_flg){
+                        plan_info[i].setAttribute("hidden","");
+                    }
+                }
+                   
+            }else{
+                // 表示する処理
+                event.target.classList.add("narrow_down");
+                for(let i = 0; i < plan_info.length; i++){
+                    plan =  plan_info[i].querySelectorAll("." + event.target.id);
+                    if(plan.length !== 0 ){
+                        plan_info[i].removeAttribute("hidden");
+                    }
+                }
+            }
+    }
+    
+</script>   
+</body>
+</html>
