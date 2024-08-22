@@ -89,7 +89,7 @@ body {
 
 main {
     padding-top: 55px;
-    width: 75%;
+    /* width: 75%; */
     margin: 0 auto;
 }
 
@@ -218,7 +218,7 @@ header {
         bottom: 0;
         right: -1000px; /* 初期配置(画面外) */
         transition: right 0.5s;
-        z-index: 0;
+        z-index: 1;
         
         display: flex;
         justify-content:center;
@@ -247,10 +247,53 @@ header {
     /* ==================== ナビゲーションメニュー本体 ]] ==================== */
 /* ==================== ナビゲーションメニュー ] ==================== */
 
+/* ==================== [ お知らせ ==================== */
+.notification-iframe-container {
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    border: 1px solid #CCCCCC;
+}
+
+.notification-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.notification-container {
+    padding: 10px 5px;
+    display: flex;
+    border-bottom: 1px solid #cccccc;
+}
+
+.notification-info {
+    text-align: center;
+    width: 20%;
+}
+
+.notification-genre {
+    background-color: #891C47;
+    color: white;
+    font-size: small;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.notification-content {
+    margin-left: 5px;
+    width: 80%;
+}
+
+.notification-content .text-red {
+    color: red;
+}
+/* ==================== お知らせ ] ==================== */
+
 
 /* ==================== [ フォーム ==================== */
 .input-container {
-    margin: 25px 0;
+    margin: 25px auto;
+    width: 75%;
 }
 
 .input-item-name {
@@ -288,6 +331,21 @@ textarea {
 select:focus, input[type="text"]:focus, textarea:focus  {
     outline: 2px #891c47 solid;
 }
+
+.submit-btn {
+    width: 150px;
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: #891C47;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    /* 文字の位置 */
+    text-align: center;
+}
 /* ==================== フォーム ] ==================== */
 
 
@@ -309,7 +367,7 @@ footer {
 
     #site-map {
         margin-left: 1em;
-        list-style-image: url(list-marker.png);
+        list-style-image: url(../kudou/list-marker.png);
         margin-bottom: 25px;
     }
 
