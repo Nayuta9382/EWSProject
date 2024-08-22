@@ -64,10 +64,9 @@ body{
     text-decoration: none;
   }
 
-  .var_button_sm button{
+  .var_button_sm p{
     display: block;
     height: 30px;
-    width: 100%;
     margin: 0 auto;
     padding: 0 15px;
     background-color: #891C47;
@@ -77,10 +76,9 @@ body{
     font-weight: 500;
     /* 文字の位置 */
     text-align: left;
-
-    
-    
 }
+
+
 
 .var_button_sm span{
   display: block;  
