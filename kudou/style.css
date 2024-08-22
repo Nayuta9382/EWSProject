@@ -136,7 +136,7 @@ header {
         /* ---------- ハンバーガーボタンをチェックしたとき ]]] ---------- */
     /* ==================== ハンバーガーボタン ]] ==================== */
     /* ==================== [[ ナビゲーションメニュー本体 ==================== */
-    nav {
+    #nav-menu {
         height: calc(100% - 55px);
         width: 350px;
         background-color: #F5F5F5;
@@ -154,22 +154,22 @@ header {
         align-items:center;
     }
 
-    nav.open {
+    #nav-menu.open {
         right: 0;
     }
 
-    nav ul li {
+    #nav-menu ul li {
         list-style: none;
         margin: 20px 0;
         padding: 5px;
     }
 
-    nav a {
+    #nav-menu a {
         color: black;
         text-decoration: none;
     }
 
-    nav a:hover {
+    #nav-menu a:hover {
         font-weight: bold;
         border-bottom: 2px solid #891c47;
     }
@@ -284,7 +284,7 @@ footer {
         width: 90%;
     }
 
-    nav {
+    #nav-menu {
         width: 100%;
     }
 
