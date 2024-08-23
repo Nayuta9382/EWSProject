@@ -290,6 +290,28 @@ header {
 }
 /* ==================== お知らせ ] ==================== */
 
+/* ==================== [ アクセス ==================== */
+.access-iframe-container {
+    margin: 20px auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #CCCCCC;
+}
+
+.access-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.access-list {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+/* ==================== アクセス ] ==================== */
+
 
 /* ==================== [ フォーム ==================== */
 .input-container {
@@ -420,6 +442,10 @@ footer {
 
     header {
         padding: 10px 15px;
+    }
+
+    .input-container {
+        width: 95%;
     }
 }
 
