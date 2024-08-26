@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all-style.css">
+</head>
+<body>
+    <header>
+        <div class="company-logo">
+            <img src="./img/logo.png" alt="ロゴ">
+        </div>
+        <div>
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" id="menu-btn">
+                <span></span>
+            </label>
+        </div>
+    </header>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="./index.html">トップページ</a></li>
+            <li><a href="./restaurant.html">レストランベルンドルフ</a></li>
+            <li><a href="./hotel.html">ホテルベルンドルフ</a></li>
+            <li><a href="./mori-no-kuni.html">ガラス体験工房　森のくに</a></li>
+            <li><a href="./recommended-package.html">おすすめプラン</a></li>
+            <li><a href="./about-us.html">会社概要・アクセス</a></li>
+            <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="example">
+                <img src="img/index_top.jpg" />
+                <p class="top-img-font">食べる、<br />泊まる、<br />体験する。</p>
+              </div>
+        </div>
+        <div class="container"> 
+            <div class="carousel">
+                <div class="slide">
+                    <a class="slide_link" href="./hotel.html" style="background-image: url('./img/restaurantSlide.jpg');">
+                        <p>ホテルベルンドルフ</p>
+                    </a>
+                    <a class="slide_link" href="./restaurant.html">
+                        <p>レストランベルンドルフ</p>
+                    </a>
+                    <a class="slide_link" href="./mori-no-kuni.html">
+                        <p>ガラス体験工房 森のくに</p>
+                    </a>
+                </div>
+                <div class="slide_button">
+                    <button id="left_button" type="button" class="left_button"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+                    <button id="right_button" type="button" class="right_button"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="var_button_lg" style="  border: solid #1c8975;">
+                <a href="#" style=" color: #1c8975;"><b>おすすめプラン</b></a>
+                <span class="material-symbols-outlined" style="color: #1c8975">
+                    arrow_forward_ios
+                </span>
+            </div>    
+            <div class="var_button_lg" style="  border: solid #251C89;">
+                <a href="#" style=" color: #251C89;"><b>会社概要・アクセス</b></a>
+                <span class="material-symbols-outlined" style="color: #251C89">
+                    arrow_forward_ios
+                </span>
+            </div>
+            <div class="var_button_lg" style="  border: solid #891C47;">
+                <a href="#" style=" color: #891C47;"><b>お問い合わせ</b></a>
+                <span class="material-symbols-outlined" style="color: #891C47">
+                    arrow_forward_ios
+                </span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div id="site-map-container">
+                <ul id="site-map">
+                    <li class="site-map-content"><a href="#">トップページ</a></li>
+                    <li class="site-map-content"><a href="#">レストランベルンドルフ</a></li>
+                    <li class="site-map-content"><a href="#">ホテルベルンドルフ</a></li>
+                    <li class="site-map-indent"><a href="#">部屋紹介・料金</a></li>
+                    <li class="site-map-indent"><a href="#">館内紹介</a></li>
+                    <li class="site-map-content"><a href="#">ガラス体験工房　森のくに</a></li>
+                    <li class="site-map-indent"><a href="#">吹きガラス</a></li>
+                    <li class="site-map-indent"><a href="#">サンドブラスト</a></li>
+                    <li class="site-map-indent"><a href="#">トンボ玉</a></li>
+                    <li class="site-map-indent"><a href="#">フュージング</a></li>
+                    <li class="site-map-indent"><a href="#">食体験イベント</a></li>
+                    <li class="site-map-content"><a href="#">おすすめプラン</a></li>
+                    <li class="site-map-content"><a href="#">会社概要・アクセス</a></li>
+                    <li class="site-map-content"><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+            
+            <div id="company-info">
+                <div class="company-logo">
+                    <img src="./img/logo.png" alt="ロゴ">
+                </div>
+                <p>〒028-3203<br>岩手県花巻市大迫町大迫10-16-1</p>
+                <p>TEL : 0198-48-2155　FAX : 0198-48-4082</p>
+                <p class="copy-right">©edelwein support. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+
+
+    <style>
+          .example {
+        width: 320px;
+        height: 400px;
+        position: relative;
+      }
+
+      .example p {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .example img {
+        width: 320px;
+        height: 400px;
+      }
+
+      .top-img-font {
+        font-size: 32px;
+        color: #891c47;
+        /* -webkit-text-stroke: 0.1px #fff; */
+        text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,
+          1px -1px 0 white, 0 1px 0 white, 0 -1px 0 white, -1px 0 0 white,
+          1px 0 0 white;
+        font-family: "Zen Maru Gothic", sans-serif;
+        margin-left: 25px;
+      }
+    </style>
+    <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
