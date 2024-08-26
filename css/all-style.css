@@ -1,5 +1,32 @@
-/* tariro */
+/* ==================== [ 全般 ==================== */
+*,  *::before, *::after {
+  box-sizing: border-box;
+}
 
+html, body, main, div, span, h1, h2, h3, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  padding-top: 55px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* ==================== 全般 ] ==================== */
+
+
+/* tariro */
+*{
+  box-sizing: border-box;
+}
 .heading {
     width: 100%;
     text-align: center;
@@ -55,9 +82,7 @@
   body {
     font-family: "Zen Maru Gothic", serif;
   }
-  .text {
-    text-align: center;
-  }
+  
   .miniimg img {
     width: 90px;
     height: 90px;
@@ -71,29 +96,7 @@
   /* kudou */
 
   
-/* ==================== [ 全般 ==================== */
-*,  *::before, *::after {
-    box-sizing: border-box;
-}
 
-html, body, main, div, span, h1, h2, h3, p, ol, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-main {
-    padding-top: 55px;
-    width: 75%;
-    margin: 0 auto;
-}
-
-/* ==================== 全般 ] ==================== */
 
 
 /* ==================== [ 共有パーツ ==================== */
@@ -555,7 +558,6 @@ footer {
     min-width: 70%;
     display: block;
     width: 70%;
-    background-image: url("../img/sample.jpg");
     background-size: cover;
     position: relative;
     border-radius: 30px;
@@ -608,10 +610,11 @@ footer {
     position: absolute;
     top:40%;
     margin: 0;
-    padding: 0 calc(15% - 15px);
-    width: 100vw;
+    /* padding: 0 calc(15% - 15px); */
+    width: 100%;
     display: flex;
     justify-content: space-between;
+
   }
   .slide_button button{
     display: block;
@@ -629,10 +632,17 @@ footer {
   }
   .slide_button .left_button{
     padding-left: 8px;
+    position: absolute;
+    left: 10%;
+  }
+  .slide_button .right_button{
+    position: absolute;
+    right: 10%;
   }
   .pointer_off{
     pointer-events: none;
   }
+
 
 
   /* 菊池 */
@@ -718,6 +728,7 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
 .var_button_lg a{
   /* 文字関係 */
@@ -734,8 +745,11 @@ td {
   padding: 10px;
   padding-left: 20px;
 }
+.var_button_lg + .var_button_lg{
+  margin-top: 10px;
+}
 
-.material-symbols-outlined {
+.var_button_lg .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   padding-right: 10px;
 }
