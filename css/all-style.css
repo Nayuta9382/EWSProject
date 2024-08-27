@@ -61,9 +61,13 @@
   .miniimg img {
     width: 90px;
     height: 90px;
+    object-fit: cover;
   }
   .zyaran {
     margin-left: 5px;
+  }
+  .zyaran img {
+    object-fit: cover;
   }
 
 
@@ -122,6 +126,7 @@ header {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 10;
 }
 /* ==================== ヘッダー ] ==================== */
 
@@ -247,10 +252,46 @@ header {
     /* ==================== ナビゲーションメニュー本体 ]] ==================== */
 /* ==================== ナビゲーションメニュー ] ==================== */
 
+/* ==================== [ 目次、森のくに ==================== */
+#topic-menu {
+    margin-left: 1em;
+    list-style-image: url(../kudou/list-marker.png);
+    margin: 0 auto 25px auto;
+    padding-left: 20px;
+
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#topic-menu li {
+    width: 50%;
+}
+
+#topic-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+#topic-menu a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid #891c47;
+}
+
+#blown-glass, #sandblast, #glass-beads, #fusing {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+.small-text {
+    font-size: small;
+}
+/* ==================== 目次 ] ==================== */
+
 /* ==================== [ お知らせ ==================== */
 .notification-iframe-container {
     margin: 20px auto;
-    width: 500px;
+    width: 80%;
     height: 200px;
     border: 1px solid #CCCCCC;
 }
@@ -272,12 +313,20 @@ header {
     width: 20%;
 }
 
+.notification-info span {
+    display: inline-block;
+}
+
 .notification-genre {
     background-color: #891C47;
     color: white;
     font-size: small;
     width: 80%;
     margin: 0 auto;
+}
+
+.notification-genre span {
+    display: inline-block;
 }
 
 .notification-content {
@@ -444,6 +493,10 @@ footer {
         padding: 10px 15px;
     }
 
+    .notification-iframe-container {
+        width: 100%;
+    }
+
     .input-container {
         width: 95%;
     }
@@ -483,6 +536,9 @@ footer {
     text-shadow:-1px -1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff ,-1px 1px 0 #ffffff ;
     position: absolute;
     top:125px;
+  }
+  .top_heading h1 span {
+    display: inline-block;
   }
   .top_heading p{
     text-align: center;
