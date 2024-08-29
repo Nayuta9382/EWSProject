@@ -2,10 +2,10 @@ const left_button = document.getElementById("left_button");
 const right_button = document.getElementById("right_button");
 
 left_button.addEventListener("click",()=>{
-    slide_left();
+    slide_right();
 });
 right_button.addEventListener("click",()=>{
-    slide_right();
+    slide_left();
 });
 
 const carousel = document.getElementsByClassName("slide");

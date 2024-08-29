@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/all-style.css">
 </head>
-<body>
+<body id="index">
     <header>
         <div class="company-logo">
             <img src="./img/logo.png" alt="ロゴ">
@@ -33,13 +33,13 @@
             <li><a href="./contact.html">お問い合わせ</a></li>
         </ul>
     </nav>
+    <div class="container">
+        <div class="example">
+            <img src="img/index_top.jpg" />
+            <p class="top-img-font">食べる、<br />泊まる、<br />体験する。</p>
+          </div>
+    </div>
     <main>
-        <div class="container">
-            <div class="example">
-                <img src="img/index_top.jpg" />
-                <p class="top-img-font">食べる、<br />泊まる、<br />体験する。</p>
-              </div>
-        </div>
         <div class="container"> 
             <div class="carousel">
                 <div class="slide">
@@ -79,6 +79,12 @@
                 </span>
             </div>
         </div>
+        <div class="container">
+            <h1 class="heading">お知らせ</h1>
+            <div class="notification-iframe-container">
+                <iframe src="./kudou/notification-source.html" width="500" height="500"></iframe>
+            </div>
+        </div>
     </main>
     <footer>
         <div id="footer-container">
@@ -110,42 +116,10 @@
                 <p class="copy-right">©edelwein support. All Rights Reserved.</p>
             </div>
         </div>
+
     </footer>
     
 
-
-
-
-
-    <style>
-          .example {
-        width: 320px;
-        height: 400px;
-        position: relative;
-      }
-
-      .example p {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      .example img {
-        width: 320px;
-        height: 400px;
-      }
-
-      .top-img-font {
-        font-size: 32px;
-        color: #891c47;
-        /* -webkit-text-stroke: 0.1px #fff; */
-        text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,
-          1px -1px 0 white, 0 1px 0 white, 0 -1px 0 white, -1px 0 0 white,
-          1px 0 0 white;
-        font-family: "Zen Maru Gothic", sans-serif;
-        margin-left: 25px;
-      }
-    </style>
     <script src="./js/main.js"></script>
     <script src="./js/index.js"></script>
 </body>

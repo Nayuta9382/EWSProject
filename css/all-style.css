@@ -12,10 +12,11 @@ body {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
   font-style: normal;
+  padding-top:55px ;
 }
 
 main {
-  padding-top: 55px;
+  padding-top: 20px;
   width: 75%;
   margin: 0 auto;
 }
@@ -298,7 +299,9 @@ header {
 /* ==================== [ お知らせ ==================== */
 .notification-iframe-container {
     margin: 20px auto;
+
     width: 80%;
+
     height: 200px;
     border: 1px solid #CCCCCC;
 }
@@ -516,12 +519,7 @@ footer {
     font-family: "Zen Maru Gothic", serif;
     
   }
-  body{
-    margin: 0;
-    padding: 0;
-    /* font-weight: 400;
-    font-style: normal; */
-  }
+ 
   
   /* トップ見出しレイアウト */
   
@@ -715,6 +713,7 @@ footer {
     font-size: 20px;
     margin: 0;
     color: white;
+    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
   }
   
   .slide_left{
@@ -898,5 +897,42 @@ td {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   padding-right: 10px;
 }
+.example {
+  width: 320px;
+  height: 400px;
+  position: relative;
+}
 
-  
+.example p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.example img {
+  width: 320px;
+  height: 400px;
+}
+
+.top-img-font {
+  font-size: 32px;
+  color: #891c47;
+  /* -webkit-text-stroke: 0.1px #fff; */
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,
+    1px -1px 0 white, 0 1px 0 white, 0 -1px 0 white, -1px 0 0 white,
+    1px 0 0 white;
+  font-family: "Zen Maru Gothic", sans-serif;
+  margin-left: 25px;
+}
+
+
+
+.container{
+  padding: 20px 0;
+}
+.container:not(#index .container){
+  border-top: 1px #cccccc solid;
+}
+.container > *{
+  margin-bottom: 20px;
+}  
