@@ -16,7 +16,6 @@ body {
 }
 
 main {
-  padding-top: 20px;
   width: 75%;
   margin: 0 auto;
 }
@@ -46,9 +45,11 @@ main {
     left: 50%;
     content: "";
   }
+  .zyaran {
+    text-align: center;
+  }
   .zyaran img {
-    width: 290px;
-    height: 210px;
+    width: 80%;
   }
   /* ボタンのスタイル */
   .btn a {
@@ -84,15 +85,17 @@ main {
     font-family: "Zen Maru Gothic", serif;
   }
   
+  .miniimg {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .miniimg img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-  }
-  .zyaran {
-    margin-left: 5px;
-  }
-  .zyaran img {
+    width: 30%;
+    height: 30%;
     object-fit: cover;
   }
 
@@ -311,42 +314,6 @@ header {
     height: 100%;
     border: none;
 }
-
-.notification-container {
-    padding: 10px 5px;
-    display: flex;
-    border-bottom: 1px solid #cccccc;
-}
-
-.notification-info {
-    text-align: center;
-    width: 20%;
-}
-
-.notification-info span {
-    display: inline-block;
-}
-
-.notification-genre {
-    background-color: #891C47;
-    color: white;
-    font-size: small;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.notification-genre span {
-    display: inline-block;
-}
-
-.notification-content {
-    margin-left: 5px;
-    width: 80%;
-}
-
-.notification-content .text-red {
-    color: red;
-}
 /* ==================== お知らせ ] ==================== */
 
 /* ==================== [ アクセス ==================== */
@@ -370,6 +337,22 @@ header {
     padding-left: 30px;
 }
 /* ==================== アクセス ] ==================== */
+
+/* ==================== [ Instagram ==================== */
+.instagram-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.instagram-container img {
+    width: 30%;
+}
+/* ==================== Instagram ] ==================== */
 
 
 /* ==================== [ フォーム ==================== */
@@ -489,29 +472,6 @@ footer {
     }
 
 /* ==================== フッター ] ==================== */
-
-@media screen and (max-width:500px) {
-    main {
-        width: 90%;
-    }
-
-    #nav-menu {
-        width: 100%;
-    }
-
-    header {
-        padding: 10px 15px;
-    }
-
-    .notification-iframe-container {
-        width: 100%;
-    }
-
-    .input-container {
-        width: 95%;
-    }
-}
-
 
 /* kumagai */
 
@@ -794,7 +754,7 @@ footer {
 
   /* パンくずリスト */
 #breadcrumbs {
-  margin: 10px 0;
+  margin: 10px;
   padding: 0;
   font-size: 14px;
 }
@@ -837,14 +797,20 @@ td {
 .table{
   border: 0.3px solid #cac9c9;
   border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
 }
 .table th {
   border: 0.3px solid #cac9c9;
   background-color: #e5e5e5;
   font-weight: lighter;
+  text-align: left;
+  padding: 10px;
+  width: 35%;
 }
 .table td{
   border: 0.3px solid #cac9c9;
+  width: 65%;
 }
 
 /* .aa {
@@ -936,3 +902,37 @@ td {
 .container > *{
   margin-bottom: 20px;
 }  
+
+@media screen and (max-width:500px) {
+    main {
+        width: 90%;
+    }
+
+    #nav-menu {
+        width: 100%;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    .zyaran img {
+        width: 100%;
+    }
+
+    .miniimg {
+        width: 100%;
+    }
+    
+    .notification-iframe-container {
+        width: 100%;
+    }
+
+    .input-container {
+        width: 95%;
+    }
+}
