@@ -3,9 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ガラス体験工房　森のくに</title>
+    <link rel="stylesheet" href="css/all-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>ここはもりの国です</h1>
+    <header>
+        <div class="company-logo">
+            <img src="kudou/logo.png" alt="ロゴ">
+        </div>
+        <div>
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" id="menu-btn">
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="restaurant.html">レストランベルンドルフ</a></li>
+            <li><a href="hotel.html">ホテルベルンドルフ</a></li>
+            <li><a href="mori-no-kuni.html">ガラス体験工房　森のくに</a></li>
+            <li><a href="recommended-package.html">おすすめプラン</a></li>
+            <li><a href="about-us.html">会社概要・アクセス</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <nav id="breadcrumbs">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><span>ガラス体験工房　森のくに</span></li>
+            </ul>
+        </nav>
+
+        <div class="top_heading">
+            <img src="img/glassmorikuni-20200327.jpg" alt="">
+            <h1><span>ガラス体験工房</span>　<span>森のくに</span></h1>
+            <p>Mori No Kuni</p>
+        </div>
+
+        <div class="container">
+            <h1 class="heading">施設概要</h1>
+            <table class="table">
+                <tr>
+                    <th>所在地</th>
+                    <td>〒028-3203<br>
+                        岩手県花巻市大迫町大迫12-45-1</td>
+                </tr>
+                <tr>
+                    <th>営業時間</th>
+                    <td>9:00 ~ 17:00<br>
+                        (体験受付最終 16:00)</td>
+                </tr>
+                <tr>
+                    <th>定休日</th>
+                    <td>火曜日<br>
+                        (祝祭日の場合は営業致します。)</td>
+                </tr>
+                <tr>
+                    <th>電話</th>
+                    <td>0198-48-3009</td>
+                </tr>
+                <tr>
+                    <th>FAX</th>
+                    <td>0198-48-2630</td>
+                </tr>
+                <tr>
+                    <th>メール</th>
+                    <td>morikuni@edelwein.co.jp</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="container">
+            <h1 class="heading">お知らせ</h1>
+            <div class="notification-iframe-container">
+                <iframe src="kudou/notification-source.html" width="500" height="500"></iframe>
+            </div>
+        </div>
+
+        <div class="card_button">
+            <a href="#">
+                <p>食体験イベントは<br>こちらから</p>
+                <img src="img/glassmorikuni-20200123 (2).jpg" alt="">
+            </a>
+        </div>
+        
+        <div class="card_button">
+            <a href="#">
+                <p>ガラス制作物の<br>通販もやっています</p>
+                <img src="kumagai/sample.jpg" alt="">
+            </a>
+        </div>
+
+        <div class="container">
+            <h1 class="heading">ガラス制作体験</h1>
+            <ul id="topic-menu">
+                <li><a href="#blown-glass">吹きガラス</a></li>
+                <li><a href="#sandblast">サンドブラスト</a></li>
+                <li><a href="#glass-beads">トンボ玉</a></li>
+                <li><a href="#fusing">フュージング</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h1 class="heading" id="blown-glass">吹きガラス</h1>
+            <div class="zyaran">
+                <img src="img/じゃらん.JPG" />
+            </div>
+            <p class="text">
+                ここに吹きガラスの説明が入ります。ここに吹きガラスの説明が入ります。ここに吹きガラスの説明が入ります。ここに吹きガラスの説明が入ります。ここに吹きガラスの説明が入ります。ここに吹きガラスの説明が入ります。
+            </p>
+            <table class="table">
+                <tr>
+                    <th>制作時間</th>
+                    <td>15分 ~</td>
+                </tr>
+                <tr>
+                    <th>体験料<span class="small-text">(税込)</span></th>
+                    <td>2000円 ~</td>
+                </tr>
+                <tr>
+                    <th>対象年齢</th>
+                    <td>3歳 ~</td>
+                </tr>
+            </table>
+            <div class="miniimg">
+                <img src="img/じゃらん.JPG" />
+                <img src="img/じゃらん.JPG" />
+                <img src="img/じゃらん.JPG" />
+            </div>
+        
+            <div class="var_button_sm">
+                <a href="#">
+                    <p>詳細を見る</p>
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="heading" id="sandblast">サンドブラスト</h1>
+            <div class="zyaran">
+                <img src="img/サンドブラスト体験.JPG" />
+            </div>
+            <p class="text">
+                ここにサンドブラストの説明が入ります。ここにサンドブラストの説明が入ります。ここにサンドブラストの説明が入ります。ここにサンドブラストの説明が入ります。ここにサンドブラストの説明が入ります。ここにサンドブラストの説明が入ります。
+            </p>
+            <table class="table">
+                <tr>
+                    <th>制作時間</th>
+                    <td>30分 ~</td>
+                </tr>
+                <tr>
+                    <th>体験料<span class="small-text">(税込)</span></th>
+                    <td>1200円 + グラス代 350円 ~</td>
+                </tr>
+                <tr>
+                    <th>対象年齢</th>
+                    <td>3歳 ~</td>
+                </tr>
+            </table>
+            <div class="miniimg">
+                <img src="img/サンドブラスト体験.JPG" />
+                <img src="img/サンドブラスト体験.JPG" />
+                <img src="img/サンドブラスト体験.JPG" />
+            </div>
+        
+            <div class="var_button_sm">
+                <a href="#">
+                    <p>詳細を見る</p>
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="heading" id="glass-beads">トンボ玉</h1>
+            <div class="zyaran">
+                <img src="img/20190405-img_5114__2_.jpg" />
+            </div>
+            <p class="text">
+                ここにトンボ玉の説明が入ります。ここにトンボ玉の説明が入ります。ここにトンボ玉の説明が入ります。ここにトンボ玉の説明が入ります。ここにトンボ玉の説明が入ります。ここにトンボ玉の説明が入ります。ここにトンボ玉の説明が入ります。
+            </p>
+            <table class="table">
+                <tr>
+                    <th>制作時間</th>
+                    <td>約30分</td>
+                </tr>
+                <tr>
+                    <th>体験料<span class="small-text">(税込)</span></th>
+                    <td>1800円 + パーツ代</td>
+                </tr>
+                <tr>
+                    <th>対象年齢</th>
+                    <td>中学生以上</td>
+                </tr>
+            </table>
+            <div class="miniimg">
+                <img src="img/20190405-img_5114__2_.jpg" />
+                <img src="img/20190405-img_5114__2_.jpg" />
+                <img src="img/20190405-img_5114__2_.jpg" />
+            </div>
+        
+            <div class="var_button_sm">
+                <a href="#">
+                    <p>詳細を見る</p>
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="heading" id="fusing">フュージング</h1>
+            <div class="zyaran">
+                <img src="img/IMG_3751.jpg" />
+            </div>
+            <p class="text">
+                ここにフュージングの説明が入ります。ここにフュージングの説明が入ります。ここにフュージングの説明が入ります。ここにフュージングの説明が入ります。ここにフュージングの説明が入ります。ここにフュージングの説明が入ります。
+            </p>
+            <table class="table">
+                <tr>
+                    <th>制作時間</th>
+                    <td>30分 ~</td>
+                </tr>
+                <tr>
+                    <th>体験料<span class="small-text">(税込)</span></th>
+                    <td>2000円 ~</td>
+                </tr>
+                <tr>
+                    <th>対象年齢</th>
+                    <td>4歳以上</td>
+                </tr>
+            </table>
+            <div class="miniimg">
+                <img src="img/IMG_3751.jpg" />
+                <img src="img/IMG_3751.jpg" />
+                <img src="img/IMG_3751.jpg" />
+            </div>
+        
+            <div class="var_button_sm">
+                <a href="#">
+                    <p>詳細を見る</p>
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="heading">Instagram</h1>
+            <div class="var_button_sm">
+                <a href="#">
+                    <p>もっと見る</p>
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-container">
+            <div id="site-map-container">
+                <ul id="site-map">
+                    <li class="site-map-content"><a href="#">トップページ</a></li>
+                    <li class="site-map-content"><a href="#">レストランベルンドルフ</a></li>
+                    <li class="site-map-content"><a href="#">ホテルベルンドルフ</a></li>
+                    <li class="site-map-indent"><a href="#">部屋紹介・料金</a></li>
+                    <li class="site-map-indent"><a href="#">館内紹介</a></li>
+                    <li class="site-map-content"><a href="#">ガラス体験工房　森のくに</a></li>
+                    <li class="site-map-indent"><a href="#">吹きガラス</a></li>
+                    <li class="site-map-indent"><a href="#">サンドブラスト</a></li>
+                    <li class="site-map-indent"><a href="#">トンボ玉</a></li>
+                    <li class="site-map-indent"><a href="#">フュージング</a></li>
+                    <li class="site-map-indent"><a href="#">食体験イベント</a></li>
+                    <li class="site-map-content"><a href="#">おすすめプラン</a></li>
+                    <li class="site-map-content"><a href="#">会社概要・アクセス</a></li>
+                    <li class="site-map-content"><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+            
+            <div id="company-info">
+                <div class="company-logo">
+                    <img src="kudou/logo.png" alt="ロゴ">
+                </div>
+                <p>〒028-3203<br>岩手県花巻市大迫町大迫10-16-1</p>
+                <p>TEL : 0198-48-2155　FAX : 0198-48-4082</p>
+                <p class="copy-right">©edelwein support. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
