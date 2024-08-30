@@ -316,8 +316,8 @@ header {
 
 /* ==================== [ アクセス ==================== */
 .access-iframe-container {
-    margin: 20px auto;
-    width: 500px;
+    margin: 0 auto;
+    width: 80%;
     height: 500px;
     border: 1px solid #CCCCCC;
 }
@@ -329,10 +329,11 @@ header {
 }
 
 .access-list {
-    width: 500px;
+    list-style: "・";
+    width: 80%;
     display: block;
     margin: 0 auto;
-    padding-left: 30px;
+    padding-left: 1em;
 }
 /* ==================== アクセス ] ==================== */
 
@@ -829,6 +830,15 @@ td {
   width: 65%;
 }
 
+.table td span {
+    display: inline-block;
+}
+
+.table td ul {
+    list-style: "・";
+    margin-left: 1em;
+}
+
 /* .aa {
   display: block;
   height: 50px;
@@ -929,9 +939,9 @@ td {
 
 
 @media screen and (max-width:500px) {
-    main {
+    /* main {
         width: 90%;
-    }
+    } */
 
     #nav-menu {
         width: 100%;
@@ -961,6 +971,10 @@ td {
         width: 100%;
     }
     
+    .access-iframe-container {
+        width: 100%;
+    }
+
     .notification-iframe-container {
         width: 100%;
     }
@@ -968,10 +982,10 @@ td {
     .input-container {
         width: 100%;
     }
-  
+
     .var_button_lg{
     width: 100%;
-  }
+    }
 }
 
 
