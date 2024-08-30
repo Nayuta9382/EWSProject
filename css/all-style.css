@@ -19,8 +19,10 @@ body {
 
 
 main {
+
   padding-top: 20px;
   /* width: 75%; */
+
 }
 /* ==================== 全般 ] ==================== */
 
@@ -47,9 +49,13 @@ main {
     left: 50%;
     content: "";
   }
-  .zyaran img {
-    width: 290px;
-    height: 210px;
+  .zyaran {
+    text-align: center;
+}
+.zyaran img {
+    width: 80%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
   }
   /* ボタンのスタイル */
   .btn a {
@@ -85,15 +91,17 @@ main {
     font-family: "Zen Maru Gothic", serif;
   }
   
+  .miniimg {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .miniimg img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-  }
-  .zyaran {
-    margin-left: 5px;
-  }
-  .zyaran img {
+    width: 30%;
+    aspect-ratio: 1/1;
     object-fit: cover;
   }
 
@@ -312,42 +320,6 @@ header {
     height: 100%;
     border: none;
 }
-
-.notification-container {
-    padding: 10px 5px;
-    display: flex;
-    border-bottom: 1px solid #cccccc;
-}
-
-.notification-info {
-    text-align: center;
-    width: 20%;
-}
-
-.notification-info span {
-    display: inline-block;
-}
-
-.notification-genre {
-    background-color: #891C47;
-    color: white;
-    font-size: small;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.notification-genre span {
-    display: inline-block;
-}
-
-.notification-content {
-    margin-left: 5px;
-    width: 80%;
-}
-
-.notification-content .text-red {
-    color: red;
-}
 /* ==================== お知らせ ] ==================== */
 
 /* ==================== [ アクセス ==================== */
@@ -372,10 +344,28 @@ header {
 }
 /* ==================== アクセス ] ==================== */
 
+/* ==================== [ Instagram ==================== */
+.instagram-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.instagram-container img {
+    width: 30%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+/* ==================== Instagram ] ==================== */
+
 
 /* ==================== [ フォーム ==================== */
 .input-container {
-    margin: 25px auto;
+    margin: 15px auto;
     width: 75%;
 }
 
@@ -392,7 +382,7 @@ header {
     font-size: small;
 }
 
-select, input[type="text"], textarea {
+select, input[type="text"], input[type="email"], input[type="tel"], textarea {
     margin-top: 3px;
     width: 100%;
     height: 35px;
@@ -411,7 +401,7 @@ textarea {
     color: #CCCCCC;
 }
 
-select:focus, input[type="text"]:focus, textarea:focus  {
+select:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus  {
     outline: 2px #891c47 solid;
 }
 
@@ -490,8 +480,6 @@ footer {
     }
 
 /* ==================== フッター ] ==================== */
-
-
 
 
 /* kumagai */
@@ -670,7 +658,9 @@ footer {
     font-size: 24px;
     font-weight:500;
     color: white;
-    -webkit-text-stroke: 0.5px #808080;
+    /* -webkit-text-stroke: 0.5px #808080; */
+    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 
+    0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
   }
   
   /* カルーセル */
@@ -704,7 +694,8 @@ footer {
     font-size: 20px;
     margin: 0;
     color: white;
-    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
+    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 
+    0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
   }
   
   .slide_left{
@@ -785,7 +776,7 @@ footer {
 
   /* パンくずリスト */
 #breadcrumbs {
-  margin: 10px 0;
+  margin: 10px;
   padding: 0;
   font-size: 14px;
 }
@@ -828,14 +819,22 @@ td {
 .table{
   border: 0.3px solid #cac9c9;
   border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
 }
 .table th {
   border: 0.3px solid #cac9c9;
   background-color: #e5e5e5;
   font-weight: lighter;
+  text-align: left;
+  vertical-align: top;
+  padding: 10px;
+  width: 35%;
 }
 .table td{
   border: 0.3px solid #cac9c9;
+  vertical-align: top;
+  width: 65%;
 }
 
 /* .aa {
@@ -910,9 +909,8 @@ td {
   font-size: 32px;
   color: #891c47;
   /* -webkit-text-stroke: 0.1px #fff; */
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,
-    1px -1px 0 white, 0 1px 0 white, 0 -1px 0 white, -1px 0 0 white,
-    1px 0 0 white;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 
+  0 1px 0 white, 0 -1px 0 white, -1px 0 0 white, 1px 0 0 white;
   font-family: "Zen Maru Gothic", sans-serif;
   margin-left: 25px;
 }
@@ -933,26 +931,49 @@ td {
 .container > *{
   margin-bottom: 20px;
 }  
+
+
+
+
+
 @media screen and (max-width:500px) {
+    main {
+        width: 90%;
+    }
 
+    #nav-menu {
+        width: 100%;
+    }
 
-  #nav-menu {
-      width: 100%;
-  }
+    header {
+        padding: 10px 15px;
+    }
 
-  header {
-      padding: 10px 15px;
-  }
+    .table {
+        width: 100%;
+    }
 
-  .notification-iframe-container {
-      width: 100%;
-  }
+    .zyaran img {
+        width: 100%;
+    }
 
-  .input-container {
-      width: 95%;
-  }
+    .miniimg {
+        width: 100%;
+    }
 
-  .var_button_lg{
+    .instagram-container {
+        width: 100%;
+    }
+    
+    .notification-iframe-container {
+        width: 100%;
+    }
+
+    .input-container {
+        width: 100%;
+    }
+  
+    .var_button_lg{
     width: 100%;
   }
 }
@@ -972,4 +993,5 @@ td {
       height: 2px;
     }
 }
+
 
