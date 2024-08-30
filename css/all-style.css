@@ -47,9 +47,11 @@ main {
   }
   .zyaran {
     text-align: center;
-  }
-  .zyaran img {
+}
+.zyaran img {
     width: 80%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
   }
   /* ボタンのスタイル */
   .btn a {
@@ -95,7 +97,7 @@ main {
 
   .miniimg img {
     width: 30%;
-    height: 30%;
+    aspect-ratio: 1/1;
     object-fit: cover;
   }
 
@@ -351,13 +353,15 @@ header {
 
 .instagram-container img {
     width: 30%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 /* ==================== Instagram ] ==================== */
 
 
 /* ==================== [ フォーム ==================== */
 .input-container {
-    margin: 25px auto;
+    margin: 15px auto;
     width: 75%;
 }
 
@@ -374,7 +378,7 @@ header {
     font-size: small;
 }
 
-select, input[type="text"], textarea {
+select, input[type="text"], input[type="email"], input[type="tel"], textarea {
     margin-top: 3px;
     width: 100%;
     height: 35px;
@@ -393,7 +397,7 @@ textarea {
     color: #CCCCCC;
 }
 
-select:focus, input[type="text"]:focus, textarea:focus  {
+select:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus  {
     outline: 2px #891c47 solid;
 }
 
@@ -639,7 +643,9 @@ footer {
     font-size: 24px;
     font-weight:500;
     color: white;
-    -webkit-text-stroke: 0.5px #808080;
+    /* -webkit-text-stroke: 0.5px #808080; */
+    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 
+    0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
   }
   
   /* カルーセル */
@@ -673,7 +679,8 @@ footer {
     font-size: 20px;
     margin: 0;
     color: white;
-    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
+    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 
+    0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
   }
   
   .slide_left{
@@ -805,11 +812,13 @@ td {
   background-color: #e5e5e5;
   font-weight: lighter;
   text-align: left;
+  vertical-align: top;
   padding: 10px;
   width: 35%;
 }
 .table td{
   border: 0.3px solid #cac9c9;
+  vertical-align: top;
   width: 65%;
 }
 
@@ -884,9 +893,8 @@ td {
   font-size: 32px;
   color: #891c47;
   /* -webkit-text-stroke: 0.1px #fff; */
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,
-    1px -1px 0 white, 0 1px 0 white, 0 -1px 0 white, -1px 0 0 white,
-    1px 0 0 white;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 
+  0 1px 0 white, 0 -1px 0 white, -1px 0 0 white, 1px 0 0 white;
   font-family: "Zen Maru Gothic", sans-serif;
   margin-left: 25px;
 }
@@ -927,12 +935,16 @@ td {
     .miniimg {
         width: 100%;
     }
+
+    .instagram-container {
+        width: 100%;
+    }
     
     .notification-iframe-container {
         width: 100%;
     }
 
     .input-container {
-        width: 95%;
+        width: 100%;
     }
 }
