@@ -13,13 +13,17 @@ body {
   font-weight: 400;
   font-style: normal;
   padding-top:55px ;
+  min-width: 375px;
+
 }
+
 
 main {
-  width: 75%;
-  margin: 0 auto;
-}
 
+  padding-top: 20px;
+  /* width: 75%; */
+
+}
 /* ==================== 全般 ] ==================== */
 
 
@@ -477,6 +481,7 @@ footer {
 
 /* ==================== フッター ] ==================== */
 
+
 /* kumagai */
 
 *{
@@ -500,7 +505,7 @@ footer {
   .top_heading h1{
     width: 100%;
     margin:0;
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     text-shadow:-1px -1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff ,-1px 1px 0 #ffffff ;
     position: absolute;
@@ -512,6 +517,7 @@ footer {
   .top_heading p{
     text-align: center;
     color: #891C47;
+    margin-top: 10px;
   }
   .heading{
       width: 100%;
@@ -615,6 +621,15 @@ footer {
     background-color: white;
     border: #891C47 solid 1px;
   }
+
+  .plan_img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
   
   /* 画像リンク */
   .card_button{
@@ -839,7 +854,7 @@ td {
 
   /* 大きさ */
   height: 50px;
-  width: 300px;
+  width: 80%;
   background-color: rgb(251, 251, 251);
 
   /* いろいろ */
@@ -873,8 +888,8 @@ td {
   padding-right: 10px;
 }
 .example {
-  width: 320px;
-  height: 400px;
+  width: 100%;
+  height: 60vh;
   position: relative;
 }
 
@@ -885,8 +900,9 @@ td {
 }
 
 .example img {
-  width: 320px;
-  height: 400px;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
 }
 
 .top-img-font {
@@ -904,12 +920,21 @@ td {
 .container{
   padding: 20px 0;
 }
+.container:not(.not_margin){
+  width: 90%;
+  margin: 0 auto;
+}
+
 .container:not(#index .container){
   border-top: 1px #cccccc solid;
 }
 .container > *{
   margin-bottom: 20px;
 }  
+
+
+
+
 
 @media screen and (max-width:500px) {
     main {
@@ -947,4 +972,26 @@ td {
     .input-container {
         width: 100%;
     }
+  
+    .var_button_lg{
+    width: 100%;
+  }
 }
+
+
+@media screen and (min-width:600px){
+  .top_heading img{
+    height: 250px;
+  }
+  .top_heading h1{
+    top:225px;
+  }
+  .heading::after {
+    margin-top: 2px;
+      display: block;
+      width: 80px; 
+      height: 2px;
+    }
+}
+
+
