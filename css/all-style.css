@@ -109,9 +109,6 @@ main {
 
   /* kudou */
 
-  
-
-
 
 /* ==================== 全般 ] ==================== */
 
@@ -200,29 +197,19 @@ header {
         top: 9px;
     }
 
-    #menu-btn-check {
-        display: none;
-    }
-
         /* ---------- [[[ ハンバーガーボタンをチェックしたとき ---------- */
-        #menu-btn-check:checked ~ #menu-btn span::before {
+        #menu-btn.active span::before {
             transform: rotate(45deg);
-        }
-
-        #menu-btn-check:checked ~ #menu-btn:not(.steps) span::before {
             bottom: 0;
         }
         
-        #menu-btn-check:checked ~ #menu-btn span {
+        #menu-btn.active span {
             background: rgba(0, 0, 0, 0);
             transition: 0.3s;
         }
 
-        #menu-btn-check:checked ~ #menu-btn span::after {
+        #menu-btn.active span::after {
             transform: rotate(-45deg);
-        }
-
-        #menu-btn-check:checked ~ #menu-btn:not(.steps) span::after {
             top: 0;
         }
 
@@ -274,9 +261,9 @@ header {
     margin-left: 1em;
     list-style-image: url(../kudou/list-marker.png);
     margin: 0 auto 25px auto;
-    padding-left: 20px;
+    padding-left: 40px;
 
-    width: 75%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -302,6 +289,11 @@ header {
 
 .small-text {
     font-size: small;
+}
+
+.explain-text {
+    width: 80%;
+    margin: 0 auto;
 }
 /* ==================== 目次 ] ==================== */
 
@@ -950,6 +942,10 @@ td {
     }
 
     .table {
+        width: 100%;
+    }
+    
+    #topic-menu {
         width: 100%;
     }
 
