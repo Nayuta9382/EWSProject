@@ -12,14 +12,11 @@
 </head>
 <body>
     <header>
-        <div class="company-logo">
+        <a class="company-logo" href="index.html">
             <img src="kudou/logo.png" alt="ロゴ">
-        </div>
-        <div>
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" id="menu-btn">
-                <span></span>
-            </label>
+        </a>
+        <div id="menu-btn">
+            <span></span>
         </div>
     </header>
 
@@ -59,25 +56,19 @@
         </div>
 
         <div class="container">
-            <!-- <form
+            <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrxsS8RWTPnVuqRV9AlN0uNpf2H_ky4yfbiNFXwTX0VmM1OQ/formResponse"
             method="POST"
             target="hidden_iframe"
             onsubmit="submitted=true;"
             class="c-form"
-            > -->
-            <form>
+            >
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">お問い合わせ種別
                             <span>必須</span>
                         </p>
-                        <!-- <select name="entry.987577699" required> -->
-                        <select name="genre" required>
-                            <!-- <option value="ホテル宿泊について">ホテル宿泊について</option>
-                            <option value="レストラン・お食事について">レストラン・お食事について</option>
-                            <option value="ガラス工房について">ガラス工房について</option>
-                            <option value="その他のお問い合わせ">その他のお問い合わせ</option> -->
+                        <select name="entry.987577699" required>
                             <option value="レストランベルンドルフについて">レストランベルンドルフ について</option>
                             <option value="ホテルベルンドルフについて">ホテルベルンドルフ について</option>
                             <option value="ガラス体験工房　森のくにについて">ガラス体験工房　森のくに について</option>
@@ -92,15 +83,13 @@
                         <p class="input-item-name">お名前
                             <span>必須</span>
                         </p>
-                        <!-- <input type="text" name="entry.1744964176" placeholder="例 : 大迫 太郎" required> -->
-                        <input type="text" name="name" placeholder="例 : 大迫 太郎" required>
+                        <input type="text" name="entry.1744964176" placeholder="例 : 大迫 太郎" required>
                     </label>
                 </div>
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">ふりがな</p>
-                        <!-- <input type="text" name="entry.1102074063" placeholder="例 : おおはさま たろう"> -->
-                        <input type="text" name="furigana" placeholder="例 : おおはさま たろう">
+                        <input type="text" name="entry.1102074063" placeholder="例 : おおはさま たろう">
                     </label>
                 </div>
                 <div class="input-container">
@@ -108,8 +97,7 @@
                         <p class="input-item-name">メールアドレス
                             <span>必須</span>
                         </p>
-                        <!-- <input type="email" name="entry.140642569" placeholder="例 : sample@edelwein.co.jp" required> -->
-                        <input type="email" name="mail" placeholder="例 : sample@edelwein.co.jp" required>
+                        <input type="email" name="entry.140642569" placeholder="例 : sample@edelwein.co.jp" required>
                     </label>
                 </div>
                 <div class="input-container">
@@ -117,8 +105,7 @@
                         <p class="input-item-name">電話番号
                             <span>必須</span>
                         </p>
-                        <!-- <input type="tel" name="entry.1134501165" placeholder="例 : 090-1234-5678" required> -->
-                        <input type="tel" name="phone" placeholder="例 : 090-1234-5678" required>
+                        <input type="tel" name="entry.1134501165" placeholder="例 : 090-1234-5678" required>
                     </label>
                 </div>
                 <div class="input-container">
@@ -126,8 +113,7 @@
                         <p class="input-item-name">お問い合わせ内容
                             <span>必須</span>
                         </p>
-                        <!-- <textarea name="entry.1956422393" placeholder="お問い合わせの内容をご入力ください" required></textarea> -->
-                        <textarea name="message" placeholder="お問い合わせの内容をご入力ください" required></textarea>
+                        <textarea name="entry.1956422393" placeholder="お問い合わせの内容をご入力ください" required></textarea>
                     </label>
                 </div>
             

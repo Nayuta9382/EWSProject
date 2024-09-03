@@ -109,9 +109,6 @@ main {
 
   /* kudou */
 
-  
-
-
 
 /* ==================== 全般 ] ==================== */
 
@@ -200,29 +197,19 @@ header {
         top: 9px;
     }
 
-    #menu-btn-check {
-        display: none;
-    }
-
         /* ---------- [[[ ハンバーガーボタンをチェックしたとき ---------- */
-        #menu-btn-check:checked ~ #menu-btn span::before {
+        #menu-btn.active span::before {
             transform: rotate(45deg);
-        }
-
-        #menu-btn-check:checked ~ #menu-btn:not(.steps) span::before {
             bottom: 0;
         }
         
-        #menu-btn-check:checked ~ #menu-btn span {
+        #menu-btn.active span {
             background: rgba(0, 0, 0, 0);
             transition: 0.3s;
         }
 
-        #menu-btn-check:checked ~ #menu-btn span::after {
+        #menu-btn.active span::after {
             transform: rotate(-45deg);
-        }
-
-        #menu-btn-check:checked ~ #menu-btn:not(.steps) span::after {
             top: 0;
         }
 
@@ -274,9 +261,9 @@ header {
     margin-left: 1em;
     list-style-image: url(../kudou/list-marker.png);
     margin: 0 auto 25px auto;
-    padding-left: 20px;
+    padding-left: 40px;
 
-    width: 75%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -303,6 +290,11 @@ header {
 .small-text {
     font-size: small;
 }
+
+.explain-text {
+    width: 80%;
+    margin: 0 auto;
+}
 /* ==================== 目次 ] ==================== */
 
 /* ==================== [ お知らせ ==================== */
@@ -324,8 +316,8 @@ header {
 
 /* ==================== [ アクセス ==================== */
 .access-iframe-container {
-    margin: 20px auto;
-    width: 500px;
+    margin: 0 auto;
+    width: 80%;
     height: 500px;
     border: 1px solid #CCCCCC;
 }
@@ -337,10 +329,11 @@ header {
 }
 
 .access-list {
-    width: 500px;
+    list-style: "・";
+    width: 80%;
     display: block;
     margin: 0 auto;
-    padding-left: 30px;
+    padding-left: 1em;
 }
 /* ==================== アクセス ] ==================== */
 
@@ -837,6 +830,15 @@ td {
   width: 65%;
 }
 
+.table td span {
+    display: inline-block;
+}
+
+.table td ul {
+    list-style: "・";
+    margin-left: 1em;
+}
+
 /* .aa {
   display: block;
   height: 50px;
@@ -937,9 +939,9 @@ td {
 
 
 @media screen and (max-width:500px) {
-    main {
+    /* main {
         width: 90%;
-    }
+    } */
 
     #nav-menu {
         width: 100%;
@@ -950,6 +952,10 @@ td {
     }
 
     .table {
+        width: 100%;
+    }
+    
+    #topic-menu {
         width: 100%;
     }
 
@@ -965,6 +971,10 @@ td {
         width: 100%;
     }
     
+    .access-iframe-container {
+        width: 100%;
+    }
+
     .notification-iframe-container {
         width: 100%;
     }
@@ -972,10 +982,10 @@ td {
     .input-container {
         width: 100%;
     }
-  
+
     .var_button_lg{
     width: 100%;
-  }
+    }
 }
 
 
