@@ -42,6 +42,8 @@ if(!$data || empty($data) || ($data["password"] !== $password)){
     exit();
 }
 
+$_SESSION["id"] = $id;
+
 
 // セッションを削除
 unset($_SESSION["errorFlg"]);

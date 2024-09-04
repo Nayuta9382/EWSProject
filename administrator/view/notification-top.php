@@ -1,5 +1,11 @@
 <?php
+
 session_start();
+// ログインをしているか
+if(!isset($_SESSION["id"])){
+    header("Location:../view/notification-login.php");
+    exit();
+}
 // エスケープ処理の関数
 function escape($str){
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
