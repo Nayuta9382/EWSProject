@@ -25,16 +25,23 @@
         <li><a href="./restaurant.html">レストランベルンドルフ</a></li>
         <li><a href="./hotel.html">ホテルベルンドルフ</a></li>
         <li><a href="./mori-no-kuni.html">ガラス体験工房　森のくに</a></li>
-        <li><a href="./recommended-package.html">おすすめプラン</a></li>
+        <li><a href="#">おすすめプラン</a></li>
         <li><a href="./about-us.html">会社概要・アクセス</a></li>
         <li><a href="./contact.html">お問い合わせ</a></li>
     </ul>
 </nav>
+<nav id="breadcrumbs">
+    <ul>
+      <li><a href="./index.html">ホーム</a></li>
+      <li><span>おすすめプラン</span></li>
+    </ul>
+  </nav>
 <div class="top_heading">
     <img src="./img/recommended-package-top.jpg" alt="">
     <h1>おすすめプラン</h1>
     <p>Recommended Package</p>
 </div>
+
 <main>
     <div class="container">
         <h1 class="heading">タグで絞り込む</h1>
@@ -50,17 +57,52 @@
     </div>
     <div class="container plan_info">
         <h1 class="heading">子供会の行事に<br>おすすめ！サンドブラスト<br>＆ランチプラン</h1>
-        <img src="./img/じゃらん.JPG" alt="" class="plan_img">
+        <div class="zyaran">
+            <img src="./img/じゃらん.JPG" alt="">
+        </div>
         <div class="tag">
             <button class="tag_button1" type="button">子供会・学校行事</button>
         </div>
         <p class="text">
-            ここにテキストが入りますここにテキスト
-            が入りますここにテキストここにテキスト
-            が入りますここにテキストが入りますここ
-            にテキストここにテキストが入りますここ
-            にテキストが入りますここにテキストここ
-            にテキストが入りますここにテキストが入
+            子供会におすすめのプランです。ここに説明文が入ります。
+            子供会におすすめのプランです。ここに説明文が入ります。
+            子供会におすすめのプランです。ここに説明文が入ります。
+            子供会におすすめのプランです。ここに説明文が入ります。
+          </p>
+          <table class="table">
+            <tr>
+              <th>所要時間</th>
+              <td>1~2時間</td>
+            </tr>
+            <tr>
+              <th>料金</th>
+              <td>一人当たり2600円~</td>
+            </tr>
+            <tr>
+              <th>受け入れ可能人数</th>
+              <td>最大40名</td>
+            </tr>
+          </table>
+          <div class="var_button_sm">
+            <a href="#">
+                <p>文字</p>
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </a>
+        </div>
+    </div>
+    <div class="container plan_info">
+        <h1 class="heading">子供会の行事に<br>おすすめ！サンドブラスト<br>＆ランチプラン</h1>
+        <div class="zyaran">
+            <img src="./img/じゃらん.JPG" alt="">
+        </div>
+        <div class="tag">
+            <button class="tag_button1" type="button">子供会・学校行事</button>
+        </div>
+        <p class="text">
+            子供会におすすめのプランです。ここに説明文が入ります。
+            子供会におすすめのプランです。ここに説明文が入ります。
+            子供会におすすめのプランです。ここに説明文が入ります。
+            子供会におすすめのプランです。ここに説明文が入ります。
           </p>
           <table class="table">
             <tr>
@@ -86,25 +128,24 @@
     
     
 </main>
-
 <footer>
     <div id="footer-container">
         <div id="site-map-container">
             <ul id="site-map">
-                <li class="site-map-content"><a href="#">トップページ</a></li>
-                <li class="site-map-content"><a href="#">レストランベルンドルフ</a></li>
-                <li class="site-map-content"><a href="#">ホテルベルンドルフ</a></li>
+                <li class="site-map-content"><a href="./index.html">トップページ</a></li>
+                <li class="site-map-content"><a href="./restaurant.html">レストランベルンドルフ</a></li>
+                <li class="site-map-content"><a href="./hotel.html">ホテルベルンドルフ</a></li>
                 <li class="site-map-indent"><a href="#">部屋紹介・料金</a></li>
                 <li class="site-map-indent"><a href="#">館内紹介</a></li>
-                <li class="site-map-content"><a href="#">ガラス体験工房　森のくに</a></li>
+                <li class="site-map-content"><a href="./mori-no-kuni.html">ガラス体験工房　森のくに</a></li>
                 <li class="site-map-indent"><a href="#">吹きガラス</a></li>
                 <li class="site-map-indent"><a href="#">サンドブラスト</a></li>
                 <li class="site-map-indent"><a href="#">トンボ玉</a></li>
                 <li class="site-map-indent"><a href="#">フュージング</a></li>
                 <li class="site-map-indent"><a href="#">食体験イベント</a></li>
                 <li class="site-map-content"><a href="#">おすすめプラン</a></li>
-                <li class="site-map-content"><a href="#">会社概要・アクセス</a></li>
-                <li class="site-map-content"><a href="#">お問い合わせ</a></li>
+                <li class="site-map-content"><a href="./about-us.html">会社概要・アクセス</a></li>
+                <li class="site-map-content"><a href="./contact.html">お問い合わせ</a></li>
             </ul>
         </div>
         
@@ -117,6 +158,7 @@
             <p class="copy-right">©edelwein support. All Rights Reserved.</p>
         </div>
     </div>
+
 </footer>
 
 <script src="./js/main.js"></script>
