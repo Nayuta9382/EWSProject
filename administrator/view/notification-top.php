@@ -50,96 +50,98 @@ $data = $stm->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ更新トップページ</title>
     <link rel="stylesheet" href="../../css/all-style.css">
-    <title>top</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="notification-top-page">
     <main>
-        <!-- 編集のフォーム -->
-        <form action="../model/delete.php" method="post">
-            <table border="1">
-                <tr>
-                    <th>タイトル</th>
-                    <th>投稿日</th>
-                    <th>編集</th>
-                    <th>削除</th>
-                </tr>
-                <?php foreach ($data as $key => $value) : ?>
-                    <tr>
-                        <td><?php echo  escape($value["title"]); ?></td>
-                        <td><?php echo escape($value["postDate"]); ?></td>
-                        <td><a href="./notification-edit.php?id=<?php echo escape($value["id"]); ?>">編集</a></td>
-                        <td><input type="checkbox" name="delete[]" value="<?php echo escape($value["id"]);?>"></td>
+        <section>
+            <h1>【お知らせ一覧】</h1>
+            <!-- 編集のフォーム -->
+            <form action="../model/delete.php" method="post">
+                <table border="1">
+                    <tr id="notification-table-heading">
+                        <th>タイトル</th>
+                        <th>投稿日</th>
+                        <th>編集</th>
+                        <th>削除</th>
                     </tr>
-                <?php endforeach; ?>
-            </table>
-            <input type="submit" value="削除">
-        </form>
+                    <?php foreach ($data as $key => $value) : ?>
+                        <tr>
+                            <td><?php echo  escape($value["title"]); ?></td>
+                            <td><?php echo escape($value["postDate"]); ?></td>
+                            <td><a href="./notification-edit.php?id=<?php echo escape($value["id"]); ?>">編集</a></td>
+                            <td><input type="checkbox" name="delete[]" value="<?php echo escape($value["id"]);?>"></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    <tr>
+                        <td colspan="4">
+                        <input type="submit" value="選択したお知らせを削除">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        
 
-        <!-- 新規追加のフォーム -->
-        <form action="../model/addition.php" method="post">
-            <div class="input-container">
-                <label>
-                    <h2>カテゴリー</h2>
-                    <?php if ($errorFlgList["category"]) echo "<p class='error'>カテゴリーがただしくありません</p>"; ?>
-                    <select name="category">
-                        <option value="all" <?php echo  escape($categoryList["all"]) ?>>全般</option>
-                        <option value="hotel" <?php echo  escape($categoryList["hotel"]) ?>>ホテルベルンドルフ</option>
-                        <option value="restaurant" <?php echo  escape($categoryList["restaurant"]) ?>>レストランベルンドルフ</option>
-                        <option value="morinokuni" <?php echo  escape($categoryList["morinokuni"]) ?>>ガラス体験工房　森のくに</option>
-                        <option value="else" <?php echo  escape($categoryList["else"]) ?>>その他</option>
-                    </select>
-                </label>
-            </div>
-
-            <div class="input-container">
-                <label>
-                    <h2>投稿日</h2>
-                    <?php if ($errorFlgList["postDate"]) echo "<p class='error'>投稿日がただしくありません</p>" ?>
-                    <input type="date" name="postDate" value="<?php echo escape($postDate) ?>">
-                </label>
-            </div>
-
-            <div class="input-container">
-                <label>
-                    <h2>タイトル</h2>
-                    <?php if ($errorFlgList["title"]) echo "<p class='error'>タイトルがただしくありません</p>" ?>
-                    <input type="text" name="title" value="<?php echo escape($title) ?>">
-                </label>
-            </div>
-
-            <div class="input-container">
-                <label>
-                    <h2>本文</h2>
-                    <?php if ($errorFlgList["content"]) echo "<p class='error'>本文がただしくありません</p>" ?>
-                    <p>リンクを貼り付けたい場合は、文章内に「こちら」という単語を含めてください。(例:「詳しくはこちら！」)</p>
-                    <textarea name="content"><?php echo escape($content) ?></textarea>
-                </label>
-            </div>
-
-            <div class="input-container">
-                <label>
-                    <h2>Instagramの投稿　またはPDFのリンク</h2>
-                    <input type="text" name="link" value="<?php echo escape($link) ?>">
-                </label>
-            </div>
-
-            <input type="submit">
-        </form>
+        <section>
+            <h1>【新規追加】</h1>
+            <!-- 新規追加のフォーム -->
+            <form action="../model/addition.php" method="post">
+                <div class="input-container">
+                    <label>
+                        <h2>カテゴリー</h2>
+                        <?php if ($errorFlgList["category"]) echo "<p class='error-message'>カテゴリーがただしくありません</p>"; ?>
+                        <select name="category">
+                            <option value="all" <?php echo  escape($categoryList["all"]) ?>>全般</option>
+                            <option value="hotel" <?php echo  escape($categoryList["hotel"]) ?>>ホテルベルンドルフ</option>
+                            <option value="restaurant" <?php echo  escape($categoryList["restaurant"]) ?>>レストランベルンドルフ</option>
+                            <option value="morinokuni" <?php echo  escape($categoryList["morinokuni"]) ?>>ガラス体験工房　森のくに</option>
+                            <option value="else" <?php echo  escape($categoryList["else"]) ?>>その他</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="input-container">
+                    <label>
+                        <h2>投稿日</h2>
+                        <?php if ($errorFlgList["postDate"]) echo "<p class='error-message'>投稿日がただしくありません</p>" ?>
+                        <input type="date" name="postDate" value="<?php echo escape($postDate) ?>">
+                    </label>
+                </div>
+                <div class="input-container">
+                    <label>
+                        <h2>タイトル</h2>
+                        <?php if ($errorFlgList["title"]) echo "<p class='error-message'>タイトルがただしくありません</p>" ?>
+                        <input type="text" name="title" value="<?php echo escape($title) ?>">
+                    </label>
+                </div>
+                <div class="input-container">
+                    <label>
+                        <h2>本文</h2>
+                        <?php if ($errorFlgList["content"]) echo "<p class='error-message'>本文がただしくありません</p>" ?>
+                        <p>リンクを貼り付けたい場合は、文章内に「こちら」という単語を含めてください。(例:「詳しくはこちら！」)</p>
+                        <textarea name="content"><?php echo escape($content) ?></textarea>
+                    </label>
+                </div>
+                <div class="input-container">
+                    <label>
+                        <h2>Instagramの投稿　またはPDFのリンク</h2>
+                        <input type="text" name="link" value="<?php echo escape($link) ?>">
+                    </label>
+                </div>
+                <div class="button-container">
+                    <input type="submit">
+                </div>
+            </form>
+        </section>
     </main>
 </body>
-<style>
-    form+form {
-        margin-top: 20px;
-        border-top: 1px solid black;
-    }
-
-    .error {
-        color: red;
-    }
-</style>
 
 </html>

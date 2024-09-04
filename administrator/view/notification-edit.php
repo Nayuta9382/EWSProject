@@ -91,13 +91,16 @@ if (isset($_SESSION["addtionError"])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ更新編集ページ</title>
     <link rel="stylesheet" href="../../css/all-style.css">
-    <title>top</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="notification-edit-page">
     <main>
         <!-- 新規追加のフォーム -->
         <form action="../model/edit.php" method="post">
@@ -147,20 +150,12 @@ if (isset($_SESSION["addtionError"])) {
                 </label>
             </div>
 
-            <button type="submit" name="submit" value="return">戻る</button>
-            <button type="submit" name="submit" value="send">更新</button>
+            <div class="button-container">
+                <button type="submit" name="submit" value="return">戻る</button>
+                <button type="submit" name="submit" value="send">更新</button>
+            </div>
         </form>
     </main>
 </body>
-<style>
-    form+form {
-        margin-top: 20px;
-        border-top: 1px solid black;
-    }
-
-    .error {
-        color: red;
-    }
-</style>
 
 </html>
