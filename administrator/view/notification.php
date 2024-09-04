@@ -1,8 +1,20 @@
 <?php
-// データベースからお知らせを取得する   
+
+// getパラメータで表示するカテゴリーを受け取る
+$categoryList = ["all", "hotel", "restaurant", "morinokuni", "else"];
 require_once "../model/db_connect.php";
-$sql = "SELECT * FROM notification ORDER BY postDate DESC";
-$stm = $pdo->prepare($sql);
+// データベースからお知らせを取得するし、  
+// カテゴリーが存在するなら検索をかける
+if(!empty($_GET['category']) && in_array($_GET["category"],$categoryList)){
+    $sql = "SELECT * FROM notification WHERE category = :category ORDER BY postDate DESC";
+    $stm = $pdo->prepare($sql);
+    $stm->bindValue(":category",$_GET["category"],PDO::PARAM_STR);
+}else{
+    // 存在るる場合
+    $sql = "SELECT * FROM notification ORDER BY postDate DESC";
+    $stm = $pdo->prepare($sql);
+}
+
 $stm->execute();
 $data = $stm->fetchAll(PDO::FETCH_ASSOC);
 

@@ -21,6 +21,10 @@ li {
   padding: 0;
 }
 
+html { 
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
@@ -141,6 +145,9 @@ body {
 
 .company-logo img {
   width: 100%;
+}
+input[type="submit"]{
+  cursor: pointer;
 }
 /* ==================== 共有パーツ ] ==================== */
 
@@ -268,6 +275,9 @@ header {
   font-weight: bold;
   border-bottom: 2px solid #891c47;
 }
+#nav-menu a:active {
+ opacity: 60%;
+}
 /* ==================== ナビゲーションメニュー本体 ]] ==================== */
 /* ==================== ナビゲーションメニュー ] ==================== */
 
@@ -295,6 +305,9 @@ header {
 #topic-menu a:hover {
   font-weight: bold;
   border-bottom: 2px solid #891c47;
+}
+#topic-menu a:active {
+  opacity: 60%;
 }
 
 #blown-glass,
@@ -470,9 +483,16 @@ footer {
   margin-bottom: 25px;
 }
 
-#site-map a {
+#site-map a{
   text-decoration: none;
   color: black;
+}
+#site-map a:hover{
+    font-weight: bold;
+    border-bottom: 2px solid #891c47;
+}
+#site-map a:active{
+  opacity: 60%;
 }
 
 .site-map-content {
@@ -562,6 +582,10 @@ footer p {
 }
 
 /* ボタンレイアウト */
+.w_80{
+  width: 80%;
+  margin: 0 auto;
+}
 
 .var_button_sm {
   width: 150px;
@@ -571,7 +595,12 @@ footer p {
 .var_button_sm a {
   text-decoration: none;
 }
-
+.var_button_sm a:hover {
+  opacity: 80%;
+}
+.var_button_sm a:active{
+  opacity: 60%;
+}
 .var_button_sm p {
   display: block;
   height: 30px;
@@ -584,6 +613,7 @@ footer p {
   font-weight: 500;
   /* 文字の位置 */
   text-align: left;
+  padding-top: 2px;
 }
 
 .var_button_sm span {
@@ -625,7 +655,7 @@ footer p {
 
 /* planの中のタグ */
 .tag {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 0;
   border: none;
@@ -666,11 +696,27 @@ footer p {
   width: 100%;
   height: 100%;
 }
+.card_button + .card_button{
+  margin-top: 20px;
+}
+.card_button:hover{
+    opacity: 80%;
+}
+.card_button img:hover{
+  border-radius: 30px;
+  transition-duration: 0.2s;
+}
+.card_button a:active{
+  opacity: 60%;
+}
 .card_button img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
+}
+.contents{
+  display: contents;
 }
 .card_button p {
   margin: 0;
@@ -710,6 +756,14 @@ footer p {
   position: relative;
   border-radius: 30px;
   margin: 0 20px;
+}
+.slide a:hover{
+  opacity: 70%;
+  border-radius: 50px;
+  transition-duration: 0.2s;
+}
+.slide a:active{
+  opacity: 50%;
 }
 .slide p {
   position: absolute;
@@ -917,6 +971,18 @@ td {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   padding-right: 10px;
 }
+.var_button_lg:hover.var_button_lg span{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.var_button_lg:hover.var_button_lg span{
+  transform: rotate(90deg);
+  transition-duration: 0.2s;
+}
+.var_button_lg:active{
+  opacity: 70%;
+}
 .example {
   width: 100%;
   height: 60vh;
@@ -1009,6 +1075,12 @@ td {
   .var_button_lg {
     width: 100%;
   }
+  .w_80 {
+    width: 100%;
+    margin-left:  auto;
+    margin-right: auto;
+  }
+  
 }
 
 @media screen and (min-width: 600px) {
@@ -1023,6 +1095,19 @@ td {
     display: block;
     width: 80px;
     height: 2px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .contents{
+    display: flex;
+  }
+  .card_button{
+    width: 40%;
+    height: 200px;
+  }
+  .card_button + .card_button{
+    margin-top: 0px;
   }
 }
 
@@ -1056,6 +1141,26 @@ td {
     left: 22.5%;
     height: 40px;
     width: 40px;
+  }
+
+  @keyframes slide_left_anime {
+    0% {
+      right: 0%;
+    }
+  
+    100% {
+      right: calc(50% + 60px);
+    }
+  }
+
+  @keyframes slide_right_anime {
+    0% {
+      left: 0%;
+    }
+  
+    100% {
+      left: calc(50% + 60px);
+    }
   }
 }
 
