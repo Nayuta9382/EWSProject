@@ -3,7 +3,7 @@
 session_start();
 
 // 更新の場合のみ実行
-if($_POST["submit"] == "save"){
+if($_POST["submit"] === "send"){
 
     // 各エラーを格納する配列
     $errors = [
