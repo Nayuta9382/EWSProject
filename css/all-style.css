@@ -717,6 +717,8 @@ footer p {
 }
 .contents{
   display: contents;
+  width: 80%;
+  margin: 0 auto;
 }
 .card_button p {
   margin: 0;
@@ -921,14 +923,6 @@ td {
   margin-left: 1em;
 }
 
-/* .aa {
-  display: block;
-  height: 50px;
-  width: 300px;
-  background-color: aqua;
-  border: solid #333;
-  border-radius: 25px;
-} */
 
 /* バー状ボタン */
 .var_button_lg {
@@ -1101,10 +1095,12 @@ td {
 @media screen and (min-width: 700px) {
   .contents{
     display: flex;
+    justify-content: space-between;
   }
   .card_button{
-    width: 40%;
+    width: 45%;
     height: 200px;
+    margin: 0;
   }
   .card_button + .card_button{
     margin-top: 0px;
