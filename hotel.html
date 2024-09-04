@@ -1,11 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>ここはホテルページです</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ホテルベルンドルフ</title>
+    <link rel="stylesheet" href="./css/all-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+        <a class="company-logo" href="index.html">
+            <img src="kudou/logo.png" alt="ロゴ">
+        </a>
+        <div id="menu-btn">
+            <span></span>
+        </div>
+    </header>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#">トップページ</a></li>
+            <li><a href="./restaurant.html">レストランベルンドルフ</a></li>
+            <li><a href="./hotel.html">ホテルベルンドルフ</a></li>
+            <li><a href="./mori-no-kuni.html">ガラス体験工房　森のくに</a></li>
+            <li><a href="./recommended-package.html">おすすめプラン</a></li>
+            <li><a href="./about-us.html">会社概要・アクセス</a></li>
+            <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <div class="conteiner">
+      <!-- 画面トップ -->
+      <div class="top_heading">
+        <img src="./img/twinroom1.jpg" alt="ツインルームの画像" />
+        <h1>ホテルベルンドルフ</h1>
+        <p>Hoteru BerunDoruhu</p>
+      </div>
+    </div>
+
+    <main>
+    <div class="container">
+      <h1 class="heading">施設概要</h1>
+
+      <table class="table">
+        <tr>
+          <th>所在地</th>
+          <td>〒028-3203<br />岩手県花巻市大迫町大迫第11地割34-6</td>
+        </tr>
+        <tr>
+          <th>営業時間</th>
+          <td>14:00～19:00(最終受付)<br />20:00(閉館)</td>
+        </tr>
+        <tr>
+          <th>電話</th>
+          <td>0193-48-4203</td>
+        </tr>
+        <tr>
+          <th>FAX</th>
+          <td>0198-48-2403</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="container">
+      <h1 class="heading">お知らせ</h1>
+      <div class="notification-iframe-container">
+        <iframe
+          src="notification-source.html"
+          width="500"
+          height="500"
+        ></iframe>
+      </div>
+    </div>
+
+      <div class="container">
+
+      <h1 class="heading">ツインルーム</h1>
+
+      <div class="zyaran">
+        <img src="img/twin4.jpg" />
+      </div>
+      <table class="table">
+        <tr>
+          <th>お一人様</th>
+          <td>7,500円(税込)～</td>
+        </tr>
+        <tr>
+          <th>お二人様</th>
+          <td>11,200円(税込)～</td>
+        </tr>
+      </table>
+
+      <div class="miniimg">
+        <img src="img/twin1.jpg"  />
+        <img src="img/twin2.jpg" />
+        <img src="img/twin3.jpg" />
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h1 class="heading">コテージ(和室・洋室)ルーム</h1>
+
+      <div class="zyaran">
+        <img src="img/youshitsu.jpg" />
+      </div>
+      <table class="table">
+        <tr>
+          <th>一棟</th>
+          <td>13,000円(税込)</td>
+        </tr>
+        <tr>
+          <th>利用人数</th>
+          <td>最大4名様まで</td>
+        </tr>
+      </table>
+
+      <p class="text w_80">
+        ※お風呂・布団はついておりません。<br />
+        布団が必要なお客様は別途550円ずつ頂戴致します。<br>
+        コテージ備品：炊飯器、ホットプレート、調理器具一式 <br>
+        ペットアメニティ：トイレトレー、トイレシート、シート予備、ケージ（洋室コテージのみ）
+
+      </p>
+
+      <div class="miniimg">
+        <img src="img/washitsu2.jpg" width="90" height="90" />
+        <img src="img/coteage.jpg" width="90" height="90" />
+        <img src="img/washitsu3.jpg" width="90" height="90" />
+      </div>
+    </div>
+
+    <div class="container">
+    <h1 class="heading">料金のご案内</h1>
+
+    <table class="table">
+      <tr>
+        <th>お一人様</th>
+        <td>洋室 6,200円(税込)～<br>
+            和室 7,500円(税込)～</td>
+      </tr>
+      <tr>
+        <th>お二人様</th>
+        <td>和・洋室 11,200円(税込)～</td>
+    </table>
+
+    <p class="text w_80">
+      料金はチェックイン時に前金精算となります。<br>※料金はすべて１部屋ご利用の場合の料金です。<br />
+      ※ご宿泊のご予約はお電話にて承っております。<br>
+
+      館内は禁煙です(コテージのみ喫煙可）<br>
+      所定の喫煙コーナーをご利用下さい。大浴場 「ぶどうの湯」 21:00までご利用できます。<br>
+    </p>
+
+    
+    <table class="table">
+      <tr>
+        <th>ご朝食</th>
+        <td>お一人様</td>
+      </tr>
+      <tr>
+        <th>
+        <td>880円(税込)<br>
+          （AM7:00～8:30 和食膳)<br>
+            9:00 close<br>
+            ※要予約<br>
+        </td>
+        </tr>
+    </table>
+
+    <p class="text w_80">
+    夕食は別館「レストランベルンドルフ」をご利用頂けます。<br>
+
+営業時間   ランチ 11:30～15:00（ラストオーダー14:30）<br>
+
+               ディナー 17:00～20:00（フードラストオーダー19:00)※要予約<br>
+
+              （ドリンクラストオーダー19:30）<br>
+
+定休日 水曜日と木曜日<br>
+
+※貸切の予約がある場合はご利用できません。<br>
+</p>
+  </div>
+
+  <div class="container">
+  <p class="text">設備・サービス</p>
+    <div id="tag_list">
+      <button id="tag_button1" type="button" class="narrow_down">無料駐車場</button>
+      <button id="tag_button2" type="button" class="narrow_down">大浴場(サウナ有)</button>
+      <button id="tag_button3" type="button" class="narrow_down">個室宴会場</button>
+      <button id="tag_button4" type="button" class="narrow_down">宅急便</button>
+      <button id="tag_button5" type="button" class="narrow_down">LAN形式接続</button>
+      <button id="tag_button6" type="button" class="narrow_down">AED</button>
+      <button id="tag_button7" type="button" class="narrow_down">ドライヤー貸出</button>
+      <button id="tag_button8" type="button" class="narrow_down">空気清浄機</button>
+      <button id="tag_button9" type="button" class="narrow_down">携帯充電器</button>
+
+
+  </div>
+
+  <br>
+
+  <p class="text">客室整備・アニメティ</p>
+  <div id="tag_list">
+  <button id="tag_button1" type="button" class="narrow_down">バス</button>
+      <button id="tag_button2" type="button" class="narrow_down">トイレ(ウォシュレット付)</button>
+      <button id="tag_button3" type="button" class="narrow_down">湯沸かしポット</button>
+      <button id="tag_button4" type="button" class="narrow_down">お茶</button>
+      <button id="tag_button5" type="button" class="narrow_down">フェイスタオル</button>
+      <button id="tag_button6" type="button" class="narrow_down">バスタオル</button>
+      <button id="tag_button7" type="button" class="narrow_down">浴衣</button>
+      <button id="tag_button8" type="button" class="narrow_down">リンス＆シャンプー</button>
+      <button id="tag_button9" type="button" class="narrow_down">ボディーソープ</button>
+      <button id="tag_button10" type="button" class="narrow_down">歯ブラシ</button>
+      <button id="tag_button11" type="button" class="narrow_down">エアコン</button>
+      <button id="tag_button12" type="button" class="narrow_down">電話(受信のみ)</button>
+      <button id="tag_button13" type="button" class="narrow_down">コーヒー</button>
+      <button id="tag_button14" type="button" class="narrow_down">ミニドライヤー</button>
+
+      <button id="tag_button15" type="button" class="narrow_down">コテージ(洋室・和室)・調理器具一式(自炊可)</button>
+</div>
+<br>
+<p class="text">宿泊のご案内について</p>
+<div id="tag_list">
+  <button id="tag_button1" type="button" class="narrow_down">チェックイン15:00～ チェックアウト10:00</button>
+  <button id="tag_button2" type="button" class="narrow_down">館内禁煙</button>
+  <button id="tag_button3" type="button" class="narrow_down">クレジット可
+  </button>
+  <button id="tag_button4" type="button" class="narrow_down">門限 午前0時</button>
+</div>
+</div>
+
+
+      </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="#">レストランベルンドルフ</a></li>
+        <li><a href="#">ホテルベルンドルフ</a></li>
+        <li><a href="#">ガラス体験工房　森のくに</a></li>
+        <li><a href="#">おすすめプラン</a></li>
+        <li><a href="#">会社概要・アクセス</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <footer>
+      <div id="footer-container">
+        <div id="site-map-container">
+          <ul id="site-map">
+            <li class="site-map-content"><a href="#">トップページ</a></li>
+            <li class="site-map-content">
+              <a href="#">レストランベルンドルフ</a>
+            </li>
+            <li class="site-map-content"><a href="#">ホテルベルンドルフ</a></li>
+            <li class="site-map-indent"><a href="#">部屋紹介・料金</a></li>
+            <li class="site-map-indent"><a href="#">館内紹介</a></li>
+            <li class="site-map-content">
+              <a href="#">ガラス体験工房　森のくに</a>
+            </li>
+            <li class="site-map-indent"><a href="#">吹きガラス</a></li>
+            <li class="site-map-indent"><a href="#">サンドブラスト</a></li>
+            <li class="site-map-indent"><a href="#">トンボ玉</a></li>
+            <li class="site-map-indent"><a href="#">フュージング</a></li>
+            <li class="site-map-indent"><a href="#">食体験イベント</a></li>
+            <li class="site-map-content"><a href="#">おすすめプラン</a></li>
+            <li class="site-map-content"><a href="#">会社概要・アクセス</a></li>
+            <li class="site-map-content"><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div id="company-info">
+          <div class="company-logo">
+            <img src="./img/logo.png" alt="ロゴ" />
+          </div>
+          <p>〒028-3203<br />岩手県花巻市大迫町大迫10-16-1</p>
+          <p>TEL : 0198-48-2155　FAX : 0198-48-4082</p>
+          <p class="copy-right">©edelwein support. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <main>
+        <script src="./js/main.js"></script>
+  </body>
 </html>
