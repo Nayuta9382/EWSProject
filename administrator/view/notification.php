@@ -1,10 +1,5 @@
 <?php
 session_start();
-// ログインをしているか
-if(!isset($_SESSION["id"])){
-    header("Location:../view/notification-login.php");
-    exit();
-}
 
 // getパラメータで表示するカテゴリーを受け取る
 $categoryList = ["all", "hotel", "restaurant", "morinokuni", "else"];
