@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+*,  *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, main, div, span, h1, h2, h3, p, ol, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.notification-container {
+    padding: 10px 5px;
+    display: flex;
+    border-bottom: 1px solid #cccccc;
+}
+
+.notification-info {
+    text-align: center;
+    width: 20%;
+}
+
+.notification-info span {
+    display: inline-block;
+}
+
+.notification-genre {
+    background-color: #891C47;
+    color: white;
+    font-size: small;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.notification-genre span {
+    display: inline-block;
+}
+
+.notification-content {
+    margin-left: 5px;
+    width: 80%;
+}
+
+.notification-content .text-red {
+    color: red;
+}
+
+@media screen and (max-width:500px) {
+    body {
+        font-size: smaller;
+    }
+
+    .notification-info {
+        width: 30%;
+    }
+
+    .notification-content {
+        width: 70%;
+    }
+}
