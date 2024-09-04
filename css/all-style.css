@@ -119,6 +119,14 @@ body {
   margin: 0 auto;
 }
 
+.text {
+  text-align: center;
+}
+
+.menu {
+  margin-left: 145px;
+}
+
 /* kudou */
 
 /* ==================== 全般 ] ==================== */
