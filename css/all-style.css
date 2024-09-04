@@ -1,9 +1,22 @@
 /* ==================== [ 全般 ==================== */
-*,  *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body, main, div, span, h1, h2, h3, p, ol, ul, li {
+html,
+body,
+main,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -12,771 +25,769 @@ body {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
   font-style: normal;
-  padding-top:55px ;
+  padding-top: 55px;
   min-width: 375px;
-
 }
 
-
 main {
-
   padding-top: 20px;
   /* width: 75%; */
-
 }
 /* ==================== 全般 ] ==================== */
 
-
 /* tariro */
-*{
+* {
   box-sizing: border-box;
 }
 .heading {
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    font-family: "Zen Maru Gothic", serif;
-  }
-  .heading::after {
-    display: block;
-    width: 50px;
-    height: 1.5px;
-    background-color: #891c47;
-    transform: translateX(-50%);
-    border-radius: 5px;
-    position: relative;
-    bottom: 0px;
-    left: 50%;
-    content: "";
-  }
-  .zyaran {
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Zen Maru Gothic", serif;
+}
+.heading::after {
+  display: block;
+  width: 50px;
+  height: 1.5px;
+  background-color: #891c47;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  content: "";
+}
+.zyaran {
+  text-align: center;
 }
 .zyaran img {
-    width: 80%;
-    aspect-ratio: 3/2;
-    object-fit: cover;
-  }
-  /* ボタンのスタイル */
-  .btn a {
-    text-align: center;
-    position: relative;
-    display: block;
-    width: 280px;
-    padding: 15px 0;
-    background-color: #891c47;
-    border-radius: 35px;
-    font-size: 12px;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  /* アイコンのスタイル */
-  .btn-arrow-right a::after {
-    text-align: center;
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 27px;
-    width: 9px;
-    height: 9px;
-    margin: auto;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
-    transform: rotate(45deg);
-  }
-  body {
-    font-family: "Zen Maru Gothic", serif;
-  }
-  
-  .miniimg {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-  }
+  width: 80%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+/* ボタンのスタイル */
+.btn a {
+  text-align: center;
+  position: relative;
+  display: block;
+  width: 280px;
+  padding: 15px 0;
+  background-color: #891c47;
+  border-radius: 35px;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
 
-  .miniimg img {
-    width: 30%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
+/* アイコンのスタイル */
+.btn-arrow-right a::after {
+  text-align: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 27px;
+  width: 9px;
+  height: 9px;
+  margin: auto;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+body {
+  font-family: "Zen Maru Gothic", serif;
+}
 
+.miniimg {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
 
+.miniimg img {
+  width: 30%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  height: 150px;
+}
 
-  /* kudou */
+.w_80 {
+  width: 80%;
+  margin: 0 auto;
+}
 
+/* kudou */
 
 /* ==================== 全般 ] ==================== */
 
-
-
 /* ==================== [ 共有パーツ ==================== */
 .company-logo {
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .company-logo img {
-    width: 100%;
+  width: 100%;
 }
 /* ==================== 共有パーツ ] ==================== */
 
-
 /* ==================== [ ヘッダー ==================== */
 header {
-    background-color: white;
-    border-bottom: 1px solid #DCDCDC;
-    padding: 10px 30px;
-    height: 55px;
-    display: block;
+  background-color: white;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 30px;
+  height: 55px;
+  display: block;
 
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 /* ==================== ヘッダー ] ==================== */
 
-
 /* ==================== [ ナビゲーションメニュー ==================== */
-    /* ==================== [[ ハンバーガーボタン ==================== */
-    #menu-btn {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 20;
-        cursor: pointer;
-        transition: 0.5s;
+/* ==================== [[ ハンバーガーボタン ==================== */
+#menu-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  cursor: pointer;
+  transition: 0.5s;
 
-        height: 40px;
-        width: 25px;
-    
-        top: 8px;
-        right: 20px;
-    }
+  height: 40px;
+  width: 25px;
 
-    #menu-btn:hover {
-        transform: scale(1.1);
-    }
+  top: 8px;
+  right: 20px;
+}
 
-    #menu-btn span {
-        height: 2px;
-        display: block;
-        position: relative;
-        transition: 0.3s;
-        width: 100%;
-        background: #891c47;
-        border-radius: 100px;
-    }
+#menu-btn:hover {
+  transform: scale(1.1);
+}
 
-    #menu-btn span::before,
-    #menu-btn span::after {
-        content: "";
-        height: 120%;
-        width: 100%;
-        display: block;
-        position: absolute;
-        transition: 0.3s;
-        background: #891c47;
-        border-radius: 100px;
-    }
+#menu-btn span {
+  height: 2px;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+  width: 100%;
+  background: #891c47;
+  border-radius: 100px;
+}
 
-    #menu-btn span::before {
-        bottom: 9px;
-    }
+#menu-btn span::before,
+#menu-btn span::after {
+  content: "";
+  height: 120%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  transition: 0.3s;
+  background: #891c47;
+  border-radius: 100px;
+}
 
-    #menu-btn span::after {
-        top: 9px;
-    }
+#menu-btn span::before {
+  bottom: 9px;
+}
 
-        /* ---------- [[[ ハンバーガーボタンをチェックしたとき ---------- */
-        #menu-btn.active span::before {
-            transform: rotate(45deg);
-            bottom: 0;
-        }
-        
-        #menu-btn.active span {
-            background: rgba(0, 0, 0, 0);
-            transition: 0.3s;
-        }
+#menu-btn span::after {
+  top: 9px;
+}
 
-        #menu-btn.active span::after {
-            transform: rotate(-45deg);
-            top: 0;
-        }
+/* ---------- [[[ ハンバーガーボタンをチェックしたとき ---------- */
+#menu-btn.active span::before {
+  transform: rotate(45deg);
+  bottom: 0;
+}
 
-        /* ---------- ハンバーガーボタンをチェックしたとき ]]] ---------- */
-    /* ==================== ハンバーガーボタン ]] ==================== */
-    /* ==================== [[ ナビゲーションメニュー本体 ==================== */
-    #nav-menu {
-        height: calc(100% - 55px);
-        width: 350px;
-        background-color: #F5F5F5;
-        border-left: 1px solid #DCDCDC;
-        text-align: center;
+#menu-btn.active span {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
 
-        position: fixed;
-        bottom: 0;
-        right: -1000px; /* 初期配置(画面外) */
-        transition: right 0.5s;
-        z-index: 1;
-        
-        display: flex;
-        justify-content:center;
-        align-items:center;
-    }
+#menu-btn.active span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
 
-    #nav-menu.open {
-        right: 0;
-    }
+/* ---------- ハンバーガーボタンをチェックしたとき ]]] ---------- */
+/* ==================== ハンバーガーボタン ]] ==================== */
+/* ==================== [[ ナビゲーションメニュー本体 ==================== */
+#nav-menu {
+  height: calc(100% - 55px);
+  width: 350px;
+  background-color: #f5f5f5;
+  border-left: 1px solid #dcdcdc;
+  text-align: center;
 
-    #nav-menu ul li {
-        list-style: none;
-        margin: 20px 0;
-        padding: 5px;
-    }
+  position: fixed;
+  bottom: 0;
+  right: -1000px; /* 初期配置(画面外) */
+  transition: right 0.5s;
+  z-index: 1;
 
-    #nav-menu a {
-        color: black;
-        text-decoration: none;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    #nav-menu a:hover {
-        font-weight: bold;
-        border-bottom: 2px solid #891c47;
-    }
-    /* ==================== ナビゲーションメニュー本体 ]] ==================== */
+#nav-menu.open {
+  right: 0;
+}
+
+#nav-menu ul li {
+  list-style: none;
+  margin: 20px 0;
+  padding: 5px;
+}
+
+#nav-menu a {
+  color: black;
+  text-decoration: none;
+}
+
+#nav-menu a:hover {
+  font-weight: bold;
+  border-bottom: 2px solid #891c47;
+}
+/* ==================== ナビゲーションメニュー本体 ]] ==================== */
 /* ==================== ナビゲーションメニュー ] ==================== */
 
 /* ==================== [ 目次、森のくに ==================== */
 #topic-menu {
-    margin-left: 1em;
-    list-style-image: url(../kudou/list-marker.png);
-    margin: 0 auto 25px auto;
-    padding-left: 40px;
+  margin-left: 1em;
+  list-style-image: url(../kudou/list-marker.png);
+  margin: 0 auto 25px auto;
+  padding-left: 40px;
 
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #topic-menu li {
-    width: 50%;
+  width: 50%;
 }
 
 #topic-menu a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 #topic-menu a:hover {
-    font-weight: bold;
-    border-bottom: 2px solid #891c47;
+  font-weight: bold;
+  border-bottom: 2px solid #891c47;
 }
 
-#blown-glass, #sandblast, #glass-beads, #fusing {
-    padding-top: 70px;
-    margin-top: -70px;
+#blown-glass,
+#sandblast,
+#glass-beads,
+#fusing {
+  padding-top: 70px;
+  margin-top: -70px;
 }
 
 .small-text {
-    font-size: small;
+  font-size: small;
 }
 
 .explain-text {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 /* ==================== 目次 ] ==================== */
 
 /* ==================== [ お知らせ ==================== */
 .notification-iframe-container {
-    margin: 20px auto;
+  margin: 20px auto;
 
-    width: 80%;
+  width: 80%;
 
-    height: 200px;
-    border: 1px solid #CCCCCC;
+  height: 200px;
+  border: 1px solid #cccccc;
 }
 
 .notification-iframe-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 /* ==================== お知らせ ] ==================== */
 
 /* ==================== [ アクセス ==================== */
 .access-iframe-container {
-    margin: 0 auto;
-    width: 80%;
-    height: 500px;
-    border: 1px solid #CCCCCC;
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+  border: 1px solid #cccccc;
 }
 
 .access-iframe-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .access-list {
-    list-style: "・";
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-    padding-left: 1em;
+  list-style: "・";
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding-left: 1em;
 }
 /* ==================== アクセス ] ==================== */
 
 /* ==================== [ Instagram ==================== */
 .instagram-container {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    row-gap: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .instagram-container img {
-    width: 30%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+  width: 30%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 /* ==================== Instagram ] ==================== */
 
-
 /* ==================== [ フォーム ==================== */
 .input-container {
-    margin: 15px auto;
-    width: 75%;
+  margin: 15px auto;
+  width: 75%;
 }
 
 .input-item-name {
-    display: block;
+  display: block;
 }
 
 .input-item-name span {
-    color: red;
-    margin-left: 10px;
-    border: 1px solid red;
-    border-radius: 3px;
-    padding: 0 5px;
-    font-size: small;
+  color: red;
+  margin-left: 10px;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 0 5px;
+  font-size: small;
 }
 
 .error-message {
-    color: red;
-    font-size: small;
+  color: red;
+  font-size: small;
 }
 
-select, input[type="text"], input[type="email"], input[type="tel"], textarea {
-    margin-top: 3px;
-    width: 100%;
-    height: 35px;
-    background-color: #F5F5F5;
-    border: none;
-    padding-left: 10px;
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  margin-top: 3px;
+  width: 100%;
+  height: 35px;
+  background-color: #f5f5f5;
+  border: none;
+  padding-left: 10px;
 }
 
 textarea {
-    padding-top: 10px;
-    height: 150px;
-    resize: none;
+  padding-top: 10px;
+  height: 150px;
+  resize: none;
 }
 
 ::placeholder {
-    color: #CCCCCC;
+  color: #cccccc;
 }
 
-select:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus  {
-    outline: 2px #891c47 solid;
+select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  outline: 2px #891c47 solid;
 }
 
 .submit-btn {
-    width: 150px;
-    display: block;
-    height: 30px;
-    margin: 0 auto;
-    padding: 0 15px;
-    background-color: #891C47;
-    border-radius: 25px;
-    border: none;
-    color: white;
-    font-weight: 500;
-    /* 文字の位置 */
-    text-align: center;
+  width: 150px;
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #891c47;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  /* 文字の位置 */
+  text-align: center;
 }
 
 .hidden-form {
-    display: none;
+  display: none;
 }
 /* ==================== フォーム ] ==================== */
 
-
 /* ==================== [ フッター ==================== */
 footer {
-    background-color: #F5F5F5;
-    border-top: 1px solid #DCDCDC;
-    display: flex;
-    justify-content:center;
-    padding: 25px 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
 }
 
-    /* ---------- [[ サイトマップ ---------- */
-    #site-map-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+/* ---------- [[ サイトマップ ---------- */
+#site-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    #site-map {
-        margin-left: 1em;
-        list-style-image: url(../kudou/list-marker.png);
-        margin-bottom: 25px;
-    }
+#site-map {
+  margin-left: 1em;
+  list-style-image: url(../kudou/list-marker.png);
+  margin-bottom: 25px;
+}
 
-    #site-map a {
-        text-decoration: none;
-        color: black;
-    }
+#site-map a {
+  text-decoration: none;
+  color: black;
+}
 
-    .site-map-content {
-        margin-top: 15px;
-    }
+.site-map-content {
+  margin-top: 15px;
+}
 
-    .site-map-indent {
-        /* 下層ページ */
-        list-style: "・";
-        margin-left: 1em;
-    }
-    /* ---------- サイトマップ ]] ---------- */
+.site-map-indent {
+  /* 下層ページ */
+  list-style: "・";
+  margin-left: 1em;
+}
+/* ---------- サイトマップ ]] ---------- */
 
-    /* ---------- [[ 企業情報 ---------- */
-    #company-info {
-        padding: 10px;
-        border-top: 2px solid #891c47;
-    }
+/* ---------- [[ 企業情報 ---------- */
+#company-info {
+  padding: 10px;
+  border-top: 2px solid #891c47;
+}
 
-    #company-info .company-logo {
-        margin: 20px 40px;
-    }
+#company-info .company-logo {
+  margin: 20px 40px;
+}
 
-    footer p {
-        margin: 10px 0;
-    }
-    /* ---------- 企業情報 ]] ---------- */
+footer p {
+  margin: 10px 0;
+}
+/* ---------- 企業情報 ]] ---------- */
 
-    .copy-right {
-        color: #808080;
-    }
+.copy-right {
+  color: #808080;
+}
 
 /* ==================== フッター ] ==================== */
 
-
 /* kumagai */
 
-*{
-    font-family: "Zen Maru Gothic", serif;
-    
-  }
- 
-  
-  /* トップ見出しレイアウト */
-  
-  /* 見出しレイアウト */
-  .top_heading{
-    width: 100%;
-    position: relative;
-  }
-  .top_heading img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  .top_heading h1{
-    width: 100%;
-    margin:0;
-    font-size: 30px;
-    text-align: center;
-    text-shadow:-1px -1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff ,-1px 1px 0 #ffffff ;
-    position: absolute;
-    top:125px;
-  }
-  .top_heading h1 span {
-    display: inline-block;
-  }
-  .top_heading p{
-    text-align: center;
-    color: #891C47;
-    margin-top: 10px;
-  }
-  .heading{
-      width: 100%;
-      text-align: center;
-      font-size: 24px;
-    }
-  .heading::after {
-      display: block;
-      width: 50px; 
-      height: 1.5px;
-      background-color: #891C47; 
-      transform: translateX(-50%); 
-      border-radius: 5px; 
-      position: relative;
-      bottom: 0px; 
-      left: 50%;
-      content: "";
-    }
-  
-    /* ボタンレイアウト */
-  
-    .var_button_sm{
-      width:150px;
-      margin:  0 auto;
-      position: relative;
-    }
-    .var_button_sm a{
-      text-decoration: none;
-    }
-  
-    .var_button_sm p{
-      display: block;
-      height: 30px;
-      margin: 0 auto;
-      padding: 0 15px;
-      background-color: #891C47;
-      border-radius: 25px;
-      border: none;
-      color: white;
-      font-weight: 500;
-      /* 文字の位置 */
-      text-align: left;
-  }
-  
-  .var_button_sm span{
-    display: block;  
-    color: white;
-    font-size: 15px;
-    position: absolute;
-    top: 8px;
-    right: 5px;
-  }
-  
-  
-  /* タグ */
-  /* ソート */
-  #tag_list{
-    width: 60%;
-    margin: 0 auto;
-    padding: 0;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: start;
-    gap:5px;
-  }
-  #tag_list button{
-    display: block;
-    width:fit-content;
-    font-size: 12px;
-    padding: 2px 10px;
-    border-radius: 7px;
-    color: #cccccc;
-    background-color: white;
-    border: #cccccc solid 1px;
-  }
-  #tag_list .narrow_down{
-    background-color: #891C47;
-    color: #ffffff;
-  }
-  
-  /* planの中のタグ */
-  .tag{
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: start;
-    gap:5px;
-  }
-  .tag button{
-    width:fit-content;
-    font-size: 12px;
-    padding: 2px 10px;
-    border-radius: 7px;
-    color: #891C47;
-    background-color: white;
-    border: #891C47 solid 1px;
-  }
-
-  .plan_img{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 220px;
-    margin-bottom: 10px;
-    object-fit: cover;
+* {
+  font-family: "Zen Maru Gothic", serif;
 }
-  
-  /* 画像リンク */
-  .card_button{
-    width: 80%;
-    height: 150px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .card_button a{
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .card_button img{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-  }
-  .card_button p{
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    text-align: right;
-    font-size: 24px;
-    font-weight:500;
-    color: white;
-    /* -webkit-text-stroke: 0.5px #808080; */
-    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 
-    0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
-  }
-  
-  /* カルーセル */
-  .carousel{
-    width: 100%;
-    height: 150px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .slide{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap :nowrap;
-    Overflow: hidden; 
-  }
-  .slide a{
-    min-width: 70%;
-    display: block;
-    width: 70%;
-    background-size: cover;
-    position: relative;
-    border-radius: 30px;
-    margin: 0 20px;
-  }
-  .slide p{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 20px;
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080, 1px -1px 0 #808080, 
-    0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080, 1px 0 0 #808080;
-  }
-  
-  .slide_left{
-    position: relative;
-    animation-name: slide_left_anime;
-    animation-fill-mode:forwards;
-    animation-duration:1s;
-    animation-timing-function:ease-out;
-  }
-  @keyframes slide_left_anime{
-    0% {
-      right: 0%;
-    }
-  
-    100% {
-      right: calc(70% + 40px);
-    }
-  }
-  .slide_right{
-    position: relative;
-    animation-name: slide_right_anime;
-    animation-fill-mode:forwards;
-    animation-duration:1s;
-    animation-timing-function:ease-out;
-  }
-  @keyframes slide_right_anime{
-    0% {
-      left: 0%;
-    }
-  
-    100% {
-      left: calc(70% + 40px);
-    }
-  }
-  
-  .slide_button{
-    box-sizing: border-box;
-    position: absolute;
-    top:40%;
-    margin: 0;
-    /* padding: 0 calc(15% - 15px); */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 
-  }
-  .slide_button button{
-    display: block;
-    border: none;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    padding-top: 3px;
-    padding-left: 2px;
-    background-color: rgba(170, 170, 170, 0.5);
-  }
-  .slide_button span{
-    color: #ffffff;
-  }
-  .slide_button .left_button{
-    padding-left: 8px;
-    position: absolute;
-    left: 10%;
-  }
-  .slide_button .right_button{
-    position: absolute;
-    right: 10%;
-  }
-  .pointer_off{
-    pointer-events: none;
+/* トップ見出しレイアウト */
+
+/* 見出しレイアウト */
+.top_heading {
+  width: 100%;
+  position: relative;
+}
+.top_heading img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.top_heading h1 {
+  width: 100%;
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: -1px -1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff;
+  position: absolute;
+  top: 125px;
+}
+.top_heading h1 span {
+  display: inline-block;
+}
+.top_heading p {
+  text-align: center;
+  color: #891c47;
+  margin-top: 10px;
+}
+.heading {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+.heading::after {
+  display: block;
+  width: 50px;
+  height: 1.5px;
+  background-color: #891c47;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  content: "";
+}
+
+/* ボタンレイアウト */
+
+.var_button_sm {
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.var_button_sm a {
+  text-decoration: none;
+}
+
+.var_button_sm p {
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #891c47;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  /* 文字の位置 */
+  text-align: left;
+}
+
+.var_button_sm span {
+  display: block;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+
+/* タグ */
+/* ソート */
+#tag_list {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 5px;
+}
+#tag_list button {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 7px;
+  color: #cccccc;
+  background-color: white;
+  border: #cccccc solid 1px;
+}
+#tag_list .narrow_down {
+  background-color: #891c47;
+  color: #ffffff;
+}
+
+/* planの中のタグ */
+.tag {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 5px;
+}
+.tag button {
+  width: fit-content;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 7px;
+  color: #891c47;
+  background-color: white;
+  border: #891c47 solid 1px;
+}
+
+.plan_img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* 画像リンク */
+.card_button {
+  width: 80%;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.card_button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card_button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.card_button p {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  /* -webkit-text-stroke: 0.5px #808080; */
+  text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080,
+    1px -1px 0 #808080, 0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080,
+    1px 0 0 #808080;
+}
+
+/* カルーセル */
+.carousel {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.slide a {
+  min-width: 70%;
+  display: block;
+  width: 70%;
+  background-size: cover;
+  position: relative;
+  border-radius: 30px;
+  margin: 0 20px;
+}
+.slide p {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 0 #808080, -1px -1px 0 #808080, -1px 1px 0 #808080,
+    1px -1px 0 #808080, 0 1px 0 #808080, 0 -1px 0 #808080, -1px 0 0 #808080,
+    1px 0 0 #808080;
+}
+
+.slide_left {
+  position: relative;
+  animation-name: slide_left_anime;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes slide_left_anime {
+  0% {
+    right: 0%;
   }
 
+  100% {
+    right: calc(70% + 40px);
+  }
+}
+.slide_right {
+  position: relative;
+  animation-name: slide_right_anime;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes slide_right_anime {
+  0% {
+    left: 0%;
+  }
 
+  100% {
+    left: calc(70% + 40px);
+  }
+}
 
-  /* 菊池 */
+.slide_button {
+  box-sizing: border-box;
+  position: absolute;
+  top: 40%;
+  margin: 0;
+  /* padding: 0 calc(15% - 15px); */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.slide_button button {
+  display: block;
+  border: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  padding-top: 3px;
+  padding-left: 2px;
+  background-color: rgba(170, 170, 170, 0.5);
+}
+.slide_button span {
+  color: #ffffff;
+}
+.slide_button .left_button {
+  padding-left: 8px;
+  position: absolute;
+  left: 10%;
+}
+.slide_button .right_button {
+  position: absolute;
+  right: 10%;
+}
+.pointer_off {
+  pointer-events: none;
+}
 
+/* 菊池 */
 
-  /* パンくずリスト */
+/* パンくずリスト */
 #breadcrumbs {
   margin: 10px;
   padding: 0;
@@ -818,7 +829,7 @@ footer {
 td {
   padding: 10px;
 }
-.table{
+.table {
   border: 0.3px solid #cac9c9;
   border-collapse: collapse;
   margin: 0 auto;
@@ -833,19 +844,19 @@ td {
   padding: 10px;
   width: 35%;
 }
-.table td{
+.table td {
   border: 0.3px solid #cac9c9;
   vertical-align: top;
   width: 65%;
 }
 
 .table td span {
-    display: inline-block;
+  display: inline-block;
 }
 
 .table td ul {
-    list-style: "・";
-    margin-left: 1em;
+  list-style: "・";
+  margin-left: 1em;
 }
 
 /* .aa {
@@ -875,7 +886,7 @@ td {
   align-items: center;
   margin: 0 auto;
 }
-.var_button_lg a{
+.var_button_lg a {
   /* 文字関係 */
   text-decoration: none;
   font-size: 24px;
@@ -890,7 +901,7 @@ td {
   padding: 10px;
   padding-left: 20px;
 }
-.var_button_lg + .var_button_lg{
+.var_button_lg + .var_button_lg {
   margin-top: 10px;
 }
 
@@ -920,149 +931,145 @@ td {
   font-size: 32px;
   color: #891c47;
   /* -webkit-text-stroke: 0.1px #fff; */
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 
-  0 1px 0 white, 0 -1px 0 white, -1px 0 0 white, 1px 0 0 white;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,
+    1px -1px 0 white, 0 1px 0 white, 0 -1px 0 white, -1px 0 0 white,
+    1px 0 0 white;
   font-family: "Zen Maru Gothic", sans-serif;
   margin-left: 25px;
 }
 
-
-
-.container{
+.container {
   padding: 20px 0;
 }
-.container:not(.not_margin){
+.container:not(.not_margin) {
   width: 90%;
   margin: 0 auto;
 }
 
-.container:not(#index .container){
+.container:not(#index .container) {
   border-top: 1px #cccccc solid;
 }
-.container > *{
+.container > * {
   margin-bottom: 20px;
-}  
+}
 
-
-
-
-
-@media screen and (max-width:500px) {
-    /* main {
+@media screen and (max-width: 500px) {
+  /* main {
         width: 90%;
     } */
 
-    #nav-menu {
-        width: 100%;
-    }
-
-    header {
-        padding: 10px 15px;
-    }
-
-    .table {
-        width: 100%;
-    }
-    
-    #topic-menu {
-        width: 100%;
-    }
-
-    .zyaran img {
-        width: 100%;
-    }
-
-    .miniimg {
-        width: 100%;
-    }
-
-    .instagram-container {
-        width: 100%;
-    }
-    
-    .access-iframe-container {
-        width: 100%;
-    }
-
-    .notification-iframe-container {
-        width: 100%;
-    }
-
-    .input-container {
-        width: 100%;
-    }
-
-    .var_button_lg{
+  #nav-menu {
     width: 100%;
-    }
+  }
+
+  header {
+    padding: 10px 15px;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  #topic-menu {
+    width: 100%;
+  }
+
+  .zyaran img {
+    width: 100%;
+  }
+
+  .miniimg {
+    width: 100%;
+  }
+
+  .instagram-container {
+    width: 100%;
+  }
+
+  .access-iframe-container {
+    width: 100%;
+  }
+
+  .notification-iframe-container {
+    width: 100%;
+  }
+
+  .input-container {
+    width: 100%;
+  }
+
+  .var_button_lg {
+    width: 100%;
+  }
 }
 
-
-@media screen and (min-width:600px){
-  .top_heading img{
+@media screen and (min-width: 600px) {
+  .top_heading img {
     height: 250px;
   }
-  .top_heading h1{
-    top:225px;
+  .top_heading h1 {
+    top: 225px;
   }
   .heading::after {
     margin-top: 2px;
-      display: block;
-      width: 80px; 
-      height: 2px;
-    }
+    display: block;
+    width: 80px;
+    height: 2px;
+  }
 }
 
-@media screen and (min-width:900px){
-  .example{
+@media screen and (min-width: 900px) {
+  .example {
     height: 80vh;
   }
-  .example p{
+  .example p {
     font-size: 40px;
     left: 120px;
   }
-  .example img{
+  .example img {
     height: 80vh;
   }
-  .carousel, .slide ,.slide a{
+  .carousel,
+  .slide,
+  .slide a {
     height: 250px;
   }
-  .slide a{
+  .slide a {
     min-width: 50%;
     width: 50%;
     margin: 0 30px;
   }
-  .slide_button .right_button{
+  .slide_button .right_button {
     right: 22.5%;
     height: 40px;
     width: 40px;
   }
-  .slide_button .left_button{
+  .slide_button .left_button {
     left: 22.5%;
     height: 40px;
     width: 40px;
   }
 }
 
-
-@media screen and (min-width:1100px){
-  .carousel, .slide ,.slide a{
-    height:300px;
+@media screen and (min-width: 1100px) {
+  .carousel,
+  .slide,
+  .slide a {
+    height: 300px;
   }
-  .slide_button .right_button{
+  .slide_button .right_button {
     height: 50px;
     width: 50px;
   }
-  .slide_button .left_button{
+  .slide_button .left_button {
     height: 50px;
     width: 50px;
   }
-  .var_button_lg{
+  .var_button_lg {
     border-radius: 30px;
     height: 70px;
   }
-  .var_button_lg + .var_button_lg{
+  .var_button_lg + .var_button_lg {
     margin-top: 40px;
   }
 }
-
