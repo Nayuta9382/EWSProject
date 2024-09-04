@@ -63,7 +63,11 @@ function escape($str){
             $link = escape($value["link"]);
             
             // aタグを生成して表示
-            $text = str_replace("こちら","<a href='".$link."' target='_blank' rel='noopener' >こちら</a>",$content);
+            if($link !== ""){
+                $text = str_replace("こちら","<a href='".$link."' target='_blank' rel='noopener' >こちら</a>",$content);
+            }else{
+                $text = $content;
+            }
             ?>
             <?php echo $text;?>
         </div>

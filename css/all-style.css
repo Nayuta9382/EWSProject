@@ -910,6 +910,17 @@ footer p {
   position: absolute;
   left: 10%;
 }
+.left_button, .right_button{
+  cursor: pointer;
+}
+.left_button:hover, .right_button:hover{
+  opacity: 80%;
+}
+.left_button:active, .right_button:active{
+  opacity: 60%;
+  
+}
+
 .slide_button .right_button {
   position: absolute;
   right: 10%;
