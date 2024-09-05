@@ -101,5 +101,4 @@ unset($_SESSION["postDate"]);
 unset($_SESSION["title"]);
 unset($_SESSION["content"]);
 unset($_SESSION["link"]);
-unset($_SESSION["id"]);
 header("Location:../view/notification-top.php");
