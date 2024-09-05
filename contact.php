@@ -13,6 +13,9 @@
     
     $errors = [
         'genre' => '',
+        'date' => '',
+        'date2' => '',
+        'headcount' => '',
         'name' => '',
         'furigana' => '',
         'email' => '',
@@ -22,6 +25,9 @@
 
     if(isset($_SESSION['errors'])) {
         $errors['genre'] = isset($_SESSION['errors']['genre']) ? $_SESSION['errors']['genre'] : "";
+        $errors['date'] = isset($_SESSION['errors']['date']) ? $_SESSION['errors']['date'] : "";
+        $errors['date2'] = isset($_SESSION['errors']['date2']) ? $_SESSION['errors']['date2'] : "";
+        $errors['headcount'] = isset($_SESSION['errors']['headcount']) ? $_SESSION['errors']['headcount'] : "";
         $errors['name'] = isset($_SESSION['errors']['name']) ? $_SESSION['errors']['name'] : "";
         $errors['furigana'] = isset($_SESSION['errors']['furigana']) ? $_SESSION['errors']['furigana'] : "";
         $errors['email'] = isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : "";
@@ -29,7 +35,7 @@
         $errors['message'] = isset($_SESSION['errors']['message']) ? $_SESSION['errors']['message'] : "";
     }
 
-    $genre = isset($_SESSION['genre']) ? $_SESSION['genre'] : "レストランベルンドルフについて";
+    $genre = isset($_SESSION['genre']) ? $_SESSION['genre'] : "レストラン";
     $genreCheck = [
         "レストラン" => "",
         "ホテル" => "",
@@ -37,7 +43,11 @@
         "おすすめプラン" => "",
         "その他" => ""
     ];
-
+    $genreCheck[$genre] = "selected";
+    
+    $date = isset($_SESSION['date']) ? $_SESSION['date'] : "";
+    $date2 = isset($_SESSION['date2']) ? $_SESSION['date2'] : "";
+    $headcount = isset($_SESSION['headcount']) ? $_SESSION['headcount'] : "";
     $name = isset($_SESSION['name']) ? $_SESSION['name'] : "";
     $furigana = isset($_SESSION['furigana']) ? $_SESSION['furigana'] : "";
     $email = isset($_SESSION['email']) ? $_SESSION['email'] : "";
@@ -126,7 +136,8 @@
                             <p class="input-item-name" id="contact-date-p">予約日
                                 <span>必須</span>
                             </p>
-                            <input type="date" name="date" id="contact-date">
+                            <p class="error-message"><?php echo $errors['date'] ?></p>
+                            <input type="date" name="date" id="contact-date" required>
                         </label>
                     </div>
 
@@ -135,7 +146,8 @@
                             <p class="input-item-name">チェックアウト
                                 <span>必須</span>
                             </p>
-                            <input type="date" name="date" id="contact-checkout-date">
+                            <p class="error-message"><?php echo $errors['date2'] ?></p>
+                            <input type="date" name="date2" id="contact-checkout-date">
                         </label>
                     </div>
 
@@ -144,7 +156,8 @@
                             <p class="input-item-name">人数
                                 <span>必須</span>
                             </p>
-                            <input type="number" name="headcount" value="1" step="1" min="1">
+                            <p class="error-message"><?php echo $errors['headcount'] ?></p>
+                            <input type="number" name="headcount" value="1" step="1" min="1" required>
                         </label>
                     </div>
                 </div>
@@ -264,45 +277,7 @@
         </div>
     </footer>
 
-    <script>
-        // 予約日(チェックイン日)をデフォルトで明日に、チェックアウト日を明後日に設定
-        window.onload = function () {
-            function formatDate(date) {
-                let year = date.getFullYear();
-                let month = String(date.getMonth() + 1).padStart(2, '0');
-                let day = String(date.getDate()).padStart(2, '0');
-                return `${year}-${month}-${day}`;
-            }
-
-            let today = new Date();
-            let tomorrow = new Date(today);
-            tomorrow.setDate(today.getDate() + 1);
-            let dayAfterTomorrow = new Date(tomorrow);
-            dayAfterTomorrow.setDate(tomorrow.getDate() + 1);
-
-            document.getElementById("contact-date").value = formatDate(tomorrow);
-            document.getElementById("contact-checkout-date").value = formatDate(dayAfterTomorrow);
-        };
-
-        // お問い合わせ種別によって項目を表示したり項目名を変えたり
-        document.getElementById('contact-genre').addEventListener('change', function() {
-            var selectedValue = this.value;
-            var contactDetail = document.getElementById('contact-detail');
-            var contactCheckoutDate = document.getElementById('contact-checkout');
-
-            if (selectedValue === 'その他') {
-                contactDetail.style.display = 'none';
-            } else if (selectedValue === 'ホテル') {
-                document.getElementById('contact-date-p').innerHTML = 'チェックイン<span>必須</span>';
-                contactDetail.style.display = 'block';
-                contactCheckoutDate.style.display = 'block';
-            } else {
-                document.getElementById('contact-date-p').innerHTML = '予約日<span>必須</span>';
-                contactDetail.style.display = 'block';
-                contactCheckoutDate.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="./js/contact.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
