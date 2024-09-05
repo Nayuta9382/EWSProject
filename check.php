@@ -19,6 +19,59 @@
             $formError = true;
         }
 
+        // ---------- 予約日(チェックイン)チェック ----------
+        if(!empty($_POST['date'])) {
+            $currentDate = date('Y-m-d');
+            if($_SESSION['genre'] !== 'その他') {
+                if($_POST['date'] <= $currentDate) {
+                    $_SESSION['errors']['date'] = "今日より過去の日付は選択できません";
+                    $formError = true;
+                } else {
+                    $_SESSION['date'] = $_POST['date'];
+                }
+            } else {
+                $_SESSION['date'] = '0001-01-01';
+            }
+        } else {
+            $_SESSION['errors']['date'] = "日付が選択されていません";
+            $formError = true;
+        }
+
+        // ---------- チェックアウトチェック ----------
+        if(!empty($_POST['date2'])) {
+            if($_SESSION['genre'] === 'ホテル') {
+                if($_POST['date2'] <= $_SESSION['date']) {
+                    $_SESSION['errors']['date2'] = "チェックインより過去の日付は選択できません";
+                    $formError = true;
+                } else {
+                    $_SESSION['date2'] = $_POST['date2'];
+                }
+            } else {
+                $_SESSION['date2'] = '0001-01-01';
+            }
+        } else {
+            $_SESSION['errors']['date2'] = "日付が選択されていません";
+            $formError = true;
+        }
+
+        // ---------- 人数チェック ----------
+        if(!empty($_POST['headcount'])) {
+            if($_SESSION['genre'] !== 'その他') {
+                $headcount = (int)$_POST['headcount'];
+                if ($headcount > 0 && $headcount <= 100) {
+                    $_SESSION['headcount'] = $headcount;
+                } else {
+                    $_SESSION['errors']['headcount'] = "人数の値が不正です";
+                    $formError = true;
+                }
+            } else {
+                $_SESSION['headcount'] = '';
+            }
+        } else {
+            $_SESSION['errors']['headcount'] = "人数が選択されていません";
+            $formError = true;
+        }
+
         // ---------- 名前チェック ----------
         if(!empty($_POST['name'])) {
             $_SESSION['name'] = $_POST['name'];
@@ -51,8 +104,7 @@
                 $formError = true;
             }
         } else {
-            $_SESSION['errors']['tel'] = "電話番号の値が不正です";
-            $formError = true;
+            $_SESSION['tel'] = "";
         }
 
         // ---------- 問い合わせ内容チェック ----------
@@ -73,15 +125,7 @@
         $_SESSION['check'] = true;
     }
     // ----------------------------------------
-    $genre = isset($_SESSION['genre']) ? $_SESSION['genre'] : ["レストラン"];
-    $genreCheck = [
-        "レストラン" => "",
-        "ホテル" => "",
-        "森のくに" => "",
-        "おすすめプラン" => "",
-        "その他" => "",
-    ];
-    $genreCheck[$genre] = "selected";
+    $genreCheck[$_SESSION['genre']] = "selected";
 
     function telFormat($tel) {
         if(!preg_match('/^(0{1}\d{1,4}-{0,1}\d{1,4}-{0,1}\d{4})$/', $tel)){
@@ -109,7 +153,6 @@
     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrxsS8RWTPnVuqRV9AlN0uNpf2H_ky4yfbiNFXwTX0VmM1OQ/formResponse"
     method="POST"
     target="_blank"
-    onSubmit="submitted=true;"
     id="formToGF">
         <!-- お問い合わせ種別 -->
         <select name="entry.987577699" class="hidden-form">
@@ -119,6 +162,15 @@
             <option value="おすすめプランの申し込み" <?php echo $genreCheck['おすすめプラン'] ?>></option>
             <option value="その他のお問い合わせ" <?php echo $genreCheck['その他'] ?>></option>
         </select>
+
+        <!-- 予約日(チェックイン) -->
+        <input type="date" name="entry.1160554725" value="<?php echo $_SESSION['date'] ?>" class="hidden-form">
+
+        <!-- チェックアウト -->
+        <input type="date" name="entry.1953586701" value="<?php echo $_SESSION['date2'] ?>" class="hidden-form">
+
+        <!-- 人数 -->
+        <input type="number" name="entry.1523496348" value="<?php echo $_SESSION['headcount'] ?>" class="hidden-form">
 
         <!-- お名前 -->
         <input type="text" name="entry.1744964176" value="<?php echo $_SESSION['name'] ?>" class="hidden-form">
