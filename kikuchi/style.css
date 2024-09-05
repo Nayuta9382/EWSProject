@@ -63,7 +63,7 @@ td {
 } */
 
 /* バー状ボタン */
-.var_button_lg {
+.bar_button_lg {
   /* 線 */
 
   border-radius: 25px;
@@ -79,7 +79,7 @@ td {
   justify-content: space-between;
   align-items: center;
 }
-.var_button_lg a{
+.bar_button_lg a{
   /* 文字関係 */
   text-decoration: none;
   font-size: 24px;
