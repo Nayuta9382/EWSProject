@@ -55,16 +55,16 @@ body{
 
   /* ボタンレイアウト */
 
-  .var_button_sm{
+  .bar_button_sm{
     width:150px;
     margin:  0 auto;
     position: relative;
   }
-  .var_button_sm a{
+  .bar_button_sm a{
     text-decoration: none;
   }
 
-  .var_button_sm p{
+  .bar_button_sm p{
     display: block;
     height: 30px;
     margin: 0 auto;
@@ -80,7 +80,7 @@ body{
 
 
 
-.var_button_sm span{
+.bar_button_sm span{
   display: block;  
   color: white;
   font-size: 15px;
