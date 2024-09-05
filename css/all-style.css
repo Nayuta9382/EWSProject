@@ -489,6 +489,8 @@ select,
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="date"],
+input[type="number"],
 textarea {
   margin-top: 3px;
   width: 100%;
@@ -515,6 +517,16 @@ input[type="tel"]:focus,
 textarea:focus,
 input[type="password"]:focus {
   outline: 2px #891c47 solid;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    transform: scale(1.5);
+    position: relative;
+    right: 10px;
+}
+
+#contact-checkout {
+    display: none;
 }
 
 .submit-btn {

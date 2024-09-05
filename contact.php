@@ -110,7 +110,7 @@
                             <span>必須</span>
                         </p>
                         <p class="error-message"><?php echo $errors['genre'] ?></p>
-                        <select name="genre" required>
+                        <select name="genre" id="contact-genre" required>
                             <option value="レストラン" <?php echo $genreCheck['レストラン'] ?>>レストランベルンドルフ について</option>
                             <option value="ホテル" <?php echo $genreCheck['ホテル'] ?>>ホテルベルンドルフ について</option>
                             <option value="森のくに" <?php echo $genreCheck['森のくに'] ?>>ガラス体験工房　森のくに について</option>
@@ -120,6 +120,35 @@
                     </label>
                 </div>
             
+                <div id="contact-detail">
+                    <div class="input-container">
+                        <label>
+                            <p class="input-item-name" id="contact-date-p">予約日
+                                <span>必須</span>
+                            </p>
+                            <input type="date" name="date" id="contact-date">
+                        </label>
+                    </div>
+
+                    <div class="input-container" id="contact-checkout">
+                        <label>
+                            <p class="input-item-name">チェックアウト
+                                <span>必須</span>
+                            </p>
+                            <input type="date" name="date" id="contact-checkout-date">
+                        </label>
+                    </div>
+
+                    <div class="input-container">
+                        <label>
+                            <p class="input-item-name">人数
+                                <span>必須</span>
+                            </p>
+                            <input type="number" name="headcount" value="1" step="1" min="1">
+                        </label>
+                    </div>
+                </div>
+
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">お名前
@@ -129,6 +158,7 @@
                         <input type="text" name="name" value="<?php echo $name ?>" placeholder="例 : 大迫 太郎" required>
                     </label>
                 </div>
+
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">ふりがな</p>
@@ -136,6 +166,7 @@
                         <input type="text" name="furigana" value="<?php echo $furigana ?>" placeholder="例 : おおはさま たろう">
                     </label>
                 </div>
+
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">メールアドレス
@@ -145,15 +176,16 @@
                         <input type="email" name="email" value="<?php echo $email ?>" placeholder="例 : sample@edelwein.co.jp" required>
                     </label>
                 </div>
+
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">電話番号
-                            <span>必須</span>
                         </p>
                         <p class="error-message"><?php echo $errors['tel'] ?></p>
-                        <input type="tel" name="tel" value="<?php echo $tel ?>" placeholder="例 : 090-1234-5678" required>
+                        <input type="tel" name="tel" value="<?php echo $tel ?>" placeholder="例 : 090-1234-5678">
                     </label>
                 </div>
+
                 <div class="input-container">
                     <label>
                         <p class="input-item-name">お問い合わせ内容
@@ -232,6 +264,45 @@
         </div>
     </footer>
 
+    <script>
+        // 予約日(チェックイン日)をデフォルトで明日に、チェックアウト日を明後日に設定
+        window.onload = function () {
+            function formatDate(date) {
+                let year = date.getFullYear();
+                let month = String(date.getMonth() + 1).padStart(2, '0');
+                let day = String(date.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            }
+
+            let today = new Date();
+            let tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            let dayAfterTomorrow = new Date(tomorrow);
+            dayAfterTomorrow.setDate(tomorrow.getDate() + 1);
+
+            document.getElementById("contact-date").value = formatDate(tomorrow);
+            document.getElementById("contact-checkout-date").value = formatDate(dayAfterTomorrow);
+        };
+
+        // お問い合わせ種別によって項目を表示したり項目名を変えたり
+        document.getElementById('contact-genre').addEventListener('change', function() {
+            var selectedValue = this.value;
+            var contactDetail = document.getElementById('contact-detail');
+            var contactCheckoutDate = document.getElementById('contact-checkout');
+
+            if (selectedValue === 'その他') {
+                contactDetail.style.display = 'none';
+            } else if (selectedValue === 'ホテル') {
+                document.getElementById('contact-date-p').innerHTML = 'チェックイン<span>必須</span>';
+                contactDetail.style.display = 'block';
+                contactCheckoutDate.style.display = 'block';
+            } else {
+                document.getElementById('contact-date-p').innerHTML = '予約日<span>必須</span>';
+                contactDetail.style.display = 'block';
+                contactCheckoutDate.style.display = 'none';
+            }
+        });
+    </script>
     <script src="./js/main.js"></script>
 </body>
 </html>
