@@ -75,7 +75,7 @@
             <li><a href="mori-no-kuni.html">ガラス体験工房　森のくに</a></li>
             <li><a href="recommended-package.html">おすすめプラン</a></li>
             <li><a href="about-us.html">会社概要・アクセス</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
         </ul>
     </nav>
 
@@ -87,7 +87,7 @@
     </nav>
 
     <div class="top_heading">
-        <img src="" alt="">
+        <img src="./img/glassmorikuni-icon.jpg" alt="">
         <h1>お問い合わせ</h1>
         <p>Contact</p>
     </div>
@@ -203,6 +203,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
