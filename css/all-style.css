@@ -1131,6 +1131,62 @@ td {
   margin-bottom: 20px;
 }
 
+/* hotel-roomの画像のレイアウト */
+
+.hotel-room-container img{
+  width: 100%;
+  display: block;
+}
+.hotel-room-container img:last-child{
+  margin-bottom: 0;
+}
+
+
+/* 画像拡大表示 */
+.img_up_div{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+  height: 100vh;
+  padding-top: 55px;
+  background-color: rgb(71, 70, 70,0.7);
+  overflow:scroll;
+}
+.img_up_img{
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 90%;
+  height: auto;
+}
+
+.event_no{
+  overflow: hidden; 
+}
+.body_event_no > *:not(.img_up_div) {
+  overflow: hidden; 
+  pointer-events:none;
+}
+
+.close_button{
+  height: 40px;
+  width: 40px;
+  display: block;
+  position: fixed;
+  top:55px;
+  right: 2%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgb(217, 217, 218,0.0);
+  cursor: pointer;
+}
+.close_button img{
+  height: 40px;
+  width: 40px;
+}
 @media screen and (max-width: 500px) {
   /* main {
         width: 90%;
@@ -1279,6 +1335,14 @@ td {
     width: 40px;
   }
 
+  .hotel-room-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .hotel-room-container img{
+    width: 45%;
+  }
+
   @keyframes slide_left_anime {
     0% {
       right: 0%;
@@ -1333,3 +1397,7 @@ td {
     margin-top: 40px;
   }
 }
+
+
+
+
