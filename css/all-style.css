@@ -48,6 +48,7 @@ main {
   text-align: center;
   font-size: 24px;
   font-family: "Zen Maru Gothic", serif;
+  font-weight: normal;
 }
 .heading::after {
   display: block;
