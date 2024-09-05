@@ -18,7 +18,7 @@ carousel[0].prepend(new_last_element);
 let slide_interval =  setInterval(slide_left,4000);
 function slide_left(){
     // ボタンのクリックを無効化する
-    left_button.classList.add("pointer_off");
+    right_button.classList.add("pointer_off");
     // 常時実行しているスライドを一時停止
     clearInterval(slide_interval);
     for(let i = 0; i < slide_element.length; i++){
@@ -32,14 +32,14 @@ function slide_left(){
             slide_element[i].classList.remove("slide_left");
         }
         // ボタンを有効化する
-        left_button.classList.remove("pointer_off");
+        right_button.classList.remove("pointer_off");
         // スライドを再開する
         slide_interval =  setInterval(slide_left,4000);
     },1000);
 }
 function slide_right(){
    // ボタンのクリックを無効化する
-    right_button.classList.add("pointer_off");
+    left_button.classList.add("pointer_off");
     // 常時実行しているスライドを一時停止
     clearInterval(slide_interval);
     for(let i = 0; i < slide_element.length; i++){
@@ -53,7 +53,7 @@ function slide_right(){
             slide_element[i].classList.remove("slide_right");
         }
           // ボタンのクリックを有効化する
-    right_button.classList.remove("pointer_off");
+    left_button.classList.remove("pointer_off");
      // スライドを再開する
      slide_interval =  setInterval(slide_left,4000);
     },1000);

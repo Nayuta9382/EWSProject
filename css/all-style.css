@@ -128,7 +128,13 @@ body {
 }
 
 .menu {
-  margin-left: 145px;
+  margin: 0 auto;
+}
+.menu img{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
 }
 
 /* kudou */
@@ -1175,7 +1181,7 @@ td {
   }
   
   .menu {
-    margin-left: 0;
+    /* margin-left: 0; */
   }
 
   .menu img {
@@ -1225,6 +1231,7 @@ td {
   .card_button + .card_button{
     margin-top: 0px;
   }
+
 }
 
 @media screen and (min-width: 900px) {
@@ -1277,6 +1284,17 @@ td {
     100% {
       left: calc(50% + 60px);
     }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menu{
+    display: flex;
+    justify-content: center;
+    gap:0 60px;
+  }
+  .menu img{
+    margin: 0;
   }
 }
 
