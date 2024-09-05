@@ -489,6 +489,8 @@ select,
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="date"],
+input[type="number"],
 textarea {
   margin-top: 3px;
   width: 100%;
@@ -515,6 +517,16 @@ input[type="tel"]:focus,
 textarea:focus,
 input[type="password"]:focus {
   outline: 2px #891c47 solid;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    transform: scale(1.5);
+    position: relative;
+    right: 10px;
+}
+
+#contact-checkout {
+    display: none;
 }
 
 .submit-btn {
@@ -663,21 +675,21 @@ footer p {
   margin: 0 auto;
 }
 
-.var_button_sm {
+.bar_button_sm {
   width: 150px;
   margin: 0 auto;
   position: relative;
 }
-.var_button_sm a {
+.bar_button_sm a {
   text-decoration: none;
 }
-.var_button_sm a:hover {
+.bar_button_sm a:hover {
   opacity: 80%;
 }
-.var_button_sm a:active{
+.bar_button_sm a:active{
   opacity: 60%;
 }
-.var_button_sm p {
+.bar_button_sm p {
   display: block;
   height: 30px;
   margin: 0 auto;
@@ -692,7 +704,7 @@ footer p {
   padding-top: 2px;
 }
 
-.var_button_sm span {
+.bar_button_sm span {
   display: block;
   color: white;
   font-size: 15px;
@@ -1023,7 +1035,7 @@ td {
 }
 
 /* バー状ボタン */
-.var_button_lg {
+.bar_button_lg {
   /* 線 */
 
   border-radius: 25px;
@@ -1040,7 +1052,7 @@ td {
   align-items: center;
   margin: 0 auto;
 }
-.var_button_lg a {
+.bar_button_lg a {
   /* 文字関係 */
   text-decoration: none;
   font-size: 24px;
@@ -1055,24 +1067,24 @@ td {
   padding: 10px;
   padding-left: 20px;
 }
-.var_button_lg + .var_button_lg {
+.bar_button_lg + .bar_button_lg {
   margin-top: 10px;
 }
 
-.var_button_lg .material-symbols-outlined {
+.bar_button_lg .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   padding-right: 10px;
 }
-.var_button_lg:hover.var_button_lg span{
+.bar_button_lg:hover.bar_button_lg span{
   margin-top: 10px;
   margin-right: 10px;
 }
 
-.var_button_lg:hover.var_button_lg span{
+.bar_button_lg:hover.bar_button_lg span{
   transform: rotate(90deg);
   transition-duration: 0.2s;
 }
-.var_button_lg:active{
+.bar_button_lg:active{
   opacity: 70%;
 }
 .example {
@@ -1228,7 +1240,7 @@ td {
     width: 100%;
   }
 
-  .var_button_lg {
+  .bar_button_lg {
     width: 100%;
   }
   .w_80 {
@@ -1377,11 +1389,11 @@ td {
     height: 50px;
     width: 50px;
   }
-  .var_button_lg {
+  .bar_button_lg {
     border-radius: 30px;
     height: 70px;
   }
-  .var_button_lg + .var_button_lg {
+  .bar_button_lg + .bar_button_lg {
     margin-top: 40px;
   }
 }
