@@ -1335,9 +1335,12 @@ td {
     width: 40px;
   }
 
-  .hotel-room-container{
+  .hotel-room-container > div{
     display: flex;
     justify-content: space-around;
+  }
+  .hotel-room-container h1{
+    margin-bottom: 20px;
   }
   .hotel-room-container img{
     width: 45%;
